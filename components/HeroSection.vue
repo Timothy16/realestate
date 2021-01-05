@@ -1,0 +1,184 @@
+<template>
+    <div>
+        <div class="wrapper">
+            <div class="container">
+                <div class="wrapper-content">
+                    <div class="header-title">home at last</div>
+                    <div class="header-text">
+                        Your Home Realtors you can trust
+                    </div>
+                    <div class="button-edit">
+                        <div class="">
+                            <div>
+                                <div class="btn btn-buy">BUY</div>
+                                <div class="btn btn-rent">RENT</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search-session rounded">
+                        <div class="d-flex">
+                            <span style="margin-top: 0.6rem"
+                                ><font-awesome-icon :icon="['fa', 'search']"
+                            /></span>
+                            <input
+                                class="pl-3"
+                                type="text"
+                                placeholder="Search City, Street,Apartment"
+                            />
+                        </div>
+                        <div class="stroke">|</div>
+                        <div>
+                            <select class="" id="options">
+                                <option selected disabled>Rooms</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                        <div class="stroke">|</div>
+                        <div>
+                            <select class="" id="options">
+                                <option selected disabled>State</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                        <div class="btn btn-search">Search</div>
+                    </div>
+                    <div class="angle-edit">
+                        <font-awesome-icon
+                            :icon="['fa', 'angle-double-down']"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<style scoped>
+@font-face {
+    font-family: sofiaPro;
+    src: url("/font/sofiaProRegular.ttf");
+}
+* {
+    font-family: sofiaPro;
+}
+.wrapper {
+    background: linear-gradient(
+            to right,
+            rgba(0, 4, 23, 0.58),
+            rgba(0, 4, 23, 0.58)
+        ),
+        url("/img/hero/hero.png");
+    height: 91.6vh;
+    background-size: cover;
+    background-position: center;
+}
+.wrapper-content {
+    margin: auto;
+    width: 70%;
+    padding-top: 20rem;
+}
+.header-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 58px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    /* text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.25); */
+    /* backdrop-filter: blur(44px); */
+    text-transform: uppercase;
+}
+.header-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #c9c9c9;
+    margin-top: 0.2rem;
+}
+.button-edit {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.btn-buy {
+    background: #08804b;
+    border-radius: 4px 0px 0px 4px;
+    color: #fff;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.btn-rent {
+    background: #ffffff;
+    border-radius: 0px 4px 4px 0px;
+    color: #08804b;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    position: relative;
+    left: -4px;
+}
+.search-session {
+    background: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+::placeholder {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #afafaf;
+    margin-right: 0.5rem;
+}
+input {
+    outline: none;
+    border: none;
+    width: 100%;
+}
+select {
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 0.5rem;
+    color: #afafaf;
+}
+.stroke {
+    color: #c4c4c4;
+    margin-top: 0.5rem;
+}
+option {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #afafaf;
+}
+.btn-search {
+    background: #08804b;
+    border-radius: 8px;
+    color: #fff;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    /* width: 100%; */
+}
+.angle-edit {
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+</style>
