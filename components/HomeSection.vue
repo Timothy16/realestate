@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card rounded shadow">
+                    <div class="card top-down rounded shadow">
                         <img
                             src="/img/home/home.png"
                             class="card-img-top"
@@ -117,7 +117,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card rounded shadow">
+                    <div class="card top-down rounded shadow">
                         <img
                             src="/img/home/home.png"
                             class="card-img-top"
@@ -174,7 +174,7 @@
             </div>
              <div class="row mt-5">
                 <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card shadow rounded">
+                    <div class="card top-down shadow rounded">
                         <img
                             src="/img/home/home.png"
                             class="card-img-top"
@@ -229,7 +229,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card rounded shadow">
+                    <div class="card top-down rounded shadow">
                         <img
                             src="/img/home/home.png"
                             class="card-img-top"
@@ -284,7 +284,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card rounded shadow">
+                    <div class="card top-down rounded shadow">
                         <img
                             src="/img/home/home.png"
                             class="card-img-top"
@@ -338,15 +338,12 @@
                         <div class="card-footer">More Information</div>
                     </div>
                 </div>
-            
-            
             </div>
             <!-- button More -->
+            </div>
             <div class="view-more mt-4">
                 View More 
             </div>
-            </div>
-            
         </div>
     </div>
 </template>
@@ -436,11 +433,12 @@ ul li {
     font-weight: normal;
     font-size: 20px;
     line-height: 32px;
-    text-align: center;
+    text-align: right;
     letter-spacing: 0.02em;
     color: #02be20;
     text-decoration: underline;
     cursor: pointer;
+    margin: 1rem 8rem 0 5rem;
 }
 .icons {
     margin-top: 0.5rem;
@@ -449,5 +447,30 @@ ul li {
     background: rgba(8, 128, 75, 0.08);
     border-radius: 38px;
     padding: 0.3rem;
+}
+@media screen and (max-width: 768px) {
+    .style-container {
+        margin: 1rem;
+    }
+    .card {
+        width: 100%;
+    }
+    .top-down {
+        margin-top: 0.5rem;
+    }
+    .view-more {
+        margin: 1rem 1rem 1rem 5rem;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1024px) {
+    .style-container {
+        margin: 1rem;
+    }
+    .card {
+        width: 100%;
+    }
+    .view-more {
+        margin: 1rem 1rem 1rem 5rem;
+    }
 }
 </style>

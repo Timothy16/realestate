@@ -1,15 +1,15 @@
 <template>
-    <div>
+    <div class="fixed-top" ref="navbar">
         <div class="style-container">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"
+                <nuxt-link to="/" class="navbar-brand"
                     ><img
                         src="/img/logo/logo.png"
                         alt=""
                         srcset=""
                         width="92px"
                         height="40px"
-                /></a>
+                /></nuxt-link>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -31,7 +31,16 @@
                             <a class="nav-link" href="#">Featured Listings</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
+                            <nuxt-link to="/about-us" class="nav-link"
+                                >About Us</nuxt-link
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <nuxt-link
+                                :to="{ path: '/', hash: '#footer' }"
+                                class="nav-link"
+                                >Contact Us</nuxt-link
+                            >
                         </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
@@ -45,6 +54,21 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    mounted() {
+        // window.scroll = this.newScroll();
+        var navbar = this.$refs.navbar;
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= 10) {
+                navbar.classList.add("scroll");
+            } else {
+                navbar.classList.remove("scroll");
+            }
+        });
+    },
+};
+</script>
 <style  scoped>
 @font-face {
     font-family: sofiaPro;
@@ -88,5 +112,23 @@
 }
 .navbar-nav {
     margin-right: 1rem !important;
+}
+.scroll {
+    background: #fff;
+    transition: 1s ease-in;
+    box-shadow: 0px 10px -14px 14px #fff !important;
+}
+@media screen and (max-width: 768px) {
+    .style-container {
+        margin: 0;
+    }
+    .nav-link {
+        margin-left: 0.5rem;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1024px) {
+    .style-container {
+        margin: 1rem;
+    }
 }
 </style>

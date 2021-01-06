@@ -5,6 +5,8 @@
         <rent-section />
         <cities />
         <border-line />
+        <property-managment />
+        <back-to-top />
     </div>
 </template>
 

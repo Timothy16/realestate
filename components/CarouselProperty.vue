@@ -28,7 +28,7 @@
                         alt="First slide"
                     />
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>helloworld</h5>
+                        <h5>Le Meridien Estate</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -38,7 +38,7 @@
                         alt="Second slide"
                     />
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>...</h5>
+                        <h5>Le Meridien Estate</h5>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -48,7 +48,7 @@
                         alt="Third slide"
                     />
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>...</h5>
+                        <h5>Le Meridien Estate</h5>
                     </div>
                 </div>
             </div>
@@ -79,3 +79,43 @@
         </div>
     </div>
 </template>
+
+<style scoped>
+@font-face {
+    font-family: sofiaPro;
+    src: url("/font/sofiaProRegular.ttf");
+}
+* {
+    font-family: sofiaPro;
+}
+
+.carousel-indicators li {
+    /* border-radius: 100%; */
+    background-color: #08804b;
+}
+.carousel-indicators {
+    bottom: -50px;
+}
+.carousel-caption {
+    width: 100% !important;
+    position: absolute;
+    right: 15%;
+    bottom: 0 !important;
+    left: 0 !important;
+    z-index: 10;
+    padding: 20px !important;
+    color: #fff;
+    background: rgba(28, 28, 28, 0.36) !important;
+    backdrop-filter: blur(8px) !important;
+    text-align: left !important;
+}
+h5 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 46px;
+    /* identical to box height */
+    letter-spacing: 0.02em;
+    color: #ffffff;
+}
+</style>

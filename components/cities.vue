@@ -22,7 +22,7 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="card rounded shadow">
+                        <div class="card top-down rounded shadow">
                             <img
                                 src="/img/home/home.png"
                                 class="card-img-top"
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="card rounded shadow">
+                        <div class="card top-down rounded shadow">
                             <img
                                 src="/img/home/home.png"
                                 class="card-img-top"
@@ -54,7 +54,7 @@
                 </div>
                 <div class="row mt-5">
                     <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="card shadow rounded">
+                        <div class="card top-down shadow rounded">
                             <img
                                 src="/img/home/home.png"
                                 class="card-img-top"
@@ -69,7 +69,7 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="card rounded shadow">
+                        <div class="card top-down rounded shadow">
                             <img
                                 src="/img/home/home.png"
                                 class="card-img-top"
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="card rounded shadow">
+                        <div class="card top-down rounded shadow">
                             <img
                                 src="/img/home/home.png"
                                 class="card-img-top"
@@ -109,7 +109,7 @@
 <style scoped>
 .home-container {
     background: rgba(42, 0, 162, 0.03);
-    padding: 3rem 0 3rem 0;
+    padding: 3rem 0 4rem 0;
 }
 .style-container {
     margin: 3rem 5rem 0 8rem;
@@ -204,5 +204,24 @@ ul li {
     background: rgba(8, 128, 75, 0.08);
     border-radius: 38px;
     padding: 0.3rem;
+}
+@media screen and (max-width: 768px) {
+    .style-container {
+        margin: 1rem;
+    }
+    .card {
+        width: 100%;
+    }
+    .top-down {
+        margin-top: 0.5rem;
+    }
+}
+@media screen and (min-width: 1000px) and (max-width: 1024px) {
+    .style-container {
+        margin: 1rem;
+    }
+    .card {
+        width: 100%;
+    }
 }
 </style>

@@ -2,7 +2,12 @@
     <div>
         <!-- Navbar -->
         <Navbar />
-        <Nuxt />
+        <div style="margin-top: 5rem">
+            <Nuxt />
+        </div>
+        <back-to-top />
+        <!-- footer -->
+        <footer-section />
     </div>
 </template>
 

@@ -27,7 +27,8 @@
                             />
                         </div>
                         <div class="stroke">|</div>
-                        <div>
+                        <hr class="line-on-mobile" />
+                        <div class="top-down">
                             <select class="" id="options">
                                 <option selected disabled>Rooms</option>
                                 <option>2</option>
@@ -36,13 +37,14 @@
                             </select>
                         </div>
                         <div class="stroke">|</div>
-                        <div>
+                        <hr class="line-on-mobile" />
+                        <div class="top-down">
                             <select class="" id="options">
                                 <option selected disabled>State</option>
                                 <option>2</option>
                             </select>
                         </div>
-                        <div class="btn btn-search">Search</div>
+                        <div class="btn btn-search top-down">Search</div>
                     </div>
                     <div class="angle-edit">
                         <font-awesome-icon
@@ -180,5 +182,72 @@ option {
     font-size: 24px;
     margin-top: 3rem;
     cursor: pointer;
+}
+.line-on-mobile {
+    display: none;
+}
+@media screen and (max-width: 578px) {
+    .wrapper {
+        background: linear-gradient(
+                to right,
+                rgba(0, 4, 23, 0.58),
+                rgba(0, 4, 23, 0.58)
+            ),
+            url("/img/hero/hero.png");
+        height: 91.6vh;
+        background-size: cover;
+        background-position: center;
+    }
+    .wrapper-content {
+        margin: auto;
+        width: 100%;
+        padding-top: 2rem;
+    }
+    .header-title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+        /* text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.25); */
+        /* backdrop-filter: blur(44px); */
+        text-transform: uppercase;
+    }
+    .header-text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 35px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        color: #c9c9c9;
+        margin-top: 0.2rem;
+    }
+    .search-session {
+        padding: 1rem;
+        display: block;
+    }
+    .stroke {
+        display: none;
+    }
+    .btn-search {
+        width: 100%;
+    }
+    .top-down {
+        margin-top: 0.5rem;
+    }
+    .line-on-mobile {
+        display: block;
+        color: #afafaf;
+    }
+}
+@media screen and (min-width: 710px) and (max-width: 1024px) {
+    .wrapper-content {
+        margin: auto;
+        width: 100%;
+        padding-top: 16rem;
+    }
 }
 </style>
