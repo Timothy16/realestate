@@ -88,7 +88,9 @@
 * {
     font-family: sofiaPro;
 }
-
+.carousel-item {
+    height: 400px;
+}
 .carousel-indicators li {
     /* border-radius: 100%; */
     background-color: #08804b;
@@ -117,5 +119,10 @@ h5 {
     /* identical to box height */
     letter-spacing: 0.02em;
     color: #ffffff;
+}
+@media screen and (max-width: 578px) {
+    .carousel-item {
+        height: auto;
+    }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="">
-        <div class="style-container">
-            <div class="header-home">FOR RENT</div>
+        <div class="container mb-3">
+            <div class="header-home mt-3">FOR RENT</div>
             <div class="border-line"></div>
             <!-- cards -->
             <div class="mt-5">
@@ -316,9 +316,9 @@
                     </div>
                 </div>
             </div>
+            <div class="view-more mt-4">View More</div>
         </div>
         <!-- button More -->
-        <div class="view-more mt-4">View More</div>
     </div>
 </template>
 
@@ -396,7 +396,7 @@ ul li {
     color: #535353;
 }
 .card {
-    width: 394px;
+    /* width: 394px; */
 }
 .view-more {
     font-style: normal;
@@ -408,7 +408,7 @@ ul li {
     color: #02be20;
     text-decoration: underline;
     cursor: pointer;
-    margin: 1rem 8rem 3rem 5rem;
+    /* margin: 1rem 8rem 3rem 5rem; */
 }
 .icons {
     margin-top: 0.5rem;
@@ -418,7 +418,7 @@ ul li {
     border-radius: 38px;
     padding: 0.3rem;
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .style-container {
         margin: 1rem;
     }
@@ -431,8 +431,8 @@ ul li {
     .view-more {
         margin: 1rem 1rem 1rem 5rem;
     }
-}
-@media screen and (min-width: 1000px) and (max-width: 1024px) {
+} */
+@media screen and (max-width: 1024px) {
     .style-container {
         margin: 1rem;
     }
@@ -441,6 +441,9 @@ ul li {
     }
     .view-more {
         margin: 1rem 1rem 1rem 5rem;
+    }
+    .top-down {
+        margin-top: 0.5rem;
     }
 }
 </style>

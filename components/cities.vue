@@ -4,7 +4,7 @@
             <div class="header-home">POPULAR CITIES</div>
             <div class="border-line"></div>
             <!-- cards -->
-            <div class="style-container mt-5">
+            <div class="container mt-5">
                 <div class="row">
                     <div class="col-sm-12 col-md-12 col-lg-4">
                         <div class="card shadow rounded">
@@ -184,7 +184,7 @@ ul li {
     color: #535353;
 }
 .card {
-    width: 394px;
+    /* width: 394px; */
 }
 .view-more {
     font-style: normal;
@@ -205,7 +205,7 @@ ul li {
     border-radius: 38px;
     padding: 0.3rem;
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .style-container {
         margin: 1rem;
     }
@@ -215,13 +215,16 @@ ul li {
     .top-down {
         margin-top: 0.5rem;
     }
-}
-@media screen and (min-width: 1000px) and (max-width: 1024px) {
+} */
+@media screen and (max-width: 1024px) {
     .style-container {
         margin: 1rem;
     }
     .card {
         width: 100%;
+    }
+    .top-down {
+        margin-top: 0.5rem;
     }
 }
 </style>

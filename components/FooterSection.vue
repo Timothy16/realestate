@@ -51,7 +51,7 @@ ul li {
     display: inline;
     font-style: normal;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 16px;
     line-height: 22px;
     letter-spacing: 1.5px;
     color: #e9fff5;

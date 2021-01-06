@@ -1,6 +1,6 @@
 <template>
-    <div class="fixed-top" ref="navbar">
-        <div class="style-container">
+    <div class="fixed-top" style="background: #fff" ref="navbar">
+        <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <nuxt-link to="/" class="navbar-brand"
                     ><img
@@ -101,7 +101,7 @@ export default {
 .nav-link {
     font-style: normal !important;
     font-weight: normal !important;
-    font-size: 22px !important;
+    font-size: 16px !important;
     line-height: 32px;
     /* identical to box height */
 

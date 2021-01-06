@@ -4,8 +4,8 @@
             <div class="header-home">LOOKING FOR A PLACE CALLED HOME ?</div>
             <div class="border-line"></div>
             <!-- cards -->
-            <div class="style-container">
-            <div class="row">
+            <div class="container">
+            <div class="row mt-5">
                 <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="card shadow rounded">
                         <img
@@ -340,10 +340,11 @@
                 </div>
             </div>
             <!-- button More -->
-            </div>
             <div class="view-more mt-4">
                 View More 
             </div>
+            </div>
+            
         </div>
     </div>
 </template>
@@ -426,7 +427,7 @@ ul li {
     color: #535353;
 }
 .card {
-    width: 394px;
+    /* width: 394px; */
 }
 .view-more {
     font-style: normal;
@@ -438,7 +439,7 @@ ul li {
     color: #02be20;
     text-decoration: underline;
     cursor: pointer;
-    margin: 1rem 8rem 0 5rem;
+    /* margin: 1rem 8rem 0 5rem; */
 }
 .icons {
     margin-top: 0.5rem;
@@ -448,7 +449,7 @@ ul li {
     border-radius: 38px;
     padding: 0.3rem;
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     .style-container {
         margin: 1rem;
     }
@@ -461,8 +462,8 @@ ul li {
     .view-more {
         margin: 1rem 1rem 1rem 5rem;
     }
-}
-@media screen and (min-width: 1000px) and (max-width: 1024px) {
+} */
+@media screen and (max-width: 1024px) {
     .style-container {
         margin: 1rem;
     }
@@ -471,6 +472,9 @@ ul li {
     }
     .view-more {
         margin: 1rem 1rem 1rem 5rem;
+    }
+    .top-down {
+        margin-top: 0.5rem;
     }
 }
 </style>

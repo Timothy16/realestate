@@ -31,7 +31,7 @@
 </template>
 <style scoped>
 .form-edit {
-    padding: 1rem 2rem 0 2rem;
+    padding: 1rem 0 0 0;
 }
 .form-head {
     font-style: normal;
@@ -62,6 +62,7 @@ textarea {
     color: #fff;
     width: 70%;
 }
+
 @media screen and (max-width: 768px) {
     .form-edit {
         padding: 1rem;
