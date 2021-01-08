@@ -395,9 +395,7 @@ ul li {
     letter-spacing: 0.75px;
     color: #535353;
 }
-.card {
-    /* width: 394px; */
-}
+
 .view-more {
     font-style: normal;
     font-weight: normal;
