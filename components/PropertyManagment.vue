@@ -13,6 +13,13 @@
     </div>
 </template>
 <style scoped>
+@font-face {
+    font-family: sofiaPro;
+    src: url("/font/sofiaProRegular.ttf");
+}
+* {
+    font-family: sofiaPro;
+}
 .style-container {
     margin: 7rem 5rem 7rem 8rem;
 }
