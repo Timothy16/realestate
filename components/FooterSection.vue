@@ -14,16 +14,33 @@
             </p>
             <p class="text-1">07063499427, 08026674533</p>
             <div class="mt-3">
+                <h5 class="footer-text">QUICK LINKS</h5>
                 <ul>
                     <li>Featured Listings</li>
                     <li>About Us</li>
                     <li>Contact Us</li>
                 </ul>
+                <h5 class="footer-text">FOLLOW US</h5>
+                <ul>
+                    <li><img src="/img/icon/ins.png" alt="" srcset="" class="footer-img"></li>
+                    <li><img src="/img/icon/lin.png" alt="" srcset="" class="footer-img"></li>
+                    <li><img src="/img/icon/fa.png" alt="" srcset="" class="footer-img"></li>
+                    <li><img src="/img/icon/tw.png" alt="" srcset="" class="footer-img"></li>
+                </ul>
+                <hr>
+                <p class="text-1">Copyright 2021 - JayCee & Jay Ltd. All Rights Reserved.</p>
             </div>
         </div>
     </div>
 </template>
 <style scoped>
+@font-face {
+    font-family: sofiaPro;
+    src: url("/font/sofiaProRegular.ttf");
+}
+* {
+    font-family: sofiaPro;
+}
 .line {
     height: 10px;
     background: #02be20;
@@ -36,7 +53,7 @@
 .text-1 {
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 24px;
     color: rgba(233, 255, 245, 0.76);
     margin-top: 0.8rem;
@@ -51,11 +68,25 @@ ul li {
     display: inline;
     font-style: normal;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 22px;
     letter-spacing: 1.5px;
     color: #e9fff5;
     margin: 0 1.5rem 0 0;
+}
+.footer-text{
+    color:#08804B;
+    font-weight: bold;
+}
+.footer-img{
+    width: 2rem;
+    margin-top: 0.7rem;
+}
+hr{
+    border: 1px solid rgba(233, 255, 245, 0.35);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    margin-top: 1rem;
 }
 @media screen and (max-width: 578px) {
     ul li {
@@ -70,5 +101,9 @@ ul li {
         color: #e9fff5;
         margin: 0 1.5rem 0 0;
     }
+    .footer-img{
+    width: 2rem;
+    margin-top: 0.7rem;
+}
 }
 </style>

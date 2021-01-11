@@ -1,61 +1,187 @@
 <template>
     <div>
+                <div>
+                    
+        <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-ride="carousel"
+        >
+            <ol class="carousel-indicators">
+                <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="0"
+                    class="active"
+                ></li>
+                <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="1"
+                ></li>
+                <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="2"
+                ></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img
+                        class="d-block w-100"
+                        src="/img/home/home.png"
+                        alt="First slide"
+                    />
+                    
+                </div>
+                <div class="carousel-item">
+                    <img
+                        class="d-block w-100"
+                        src="/img/home/home.png"
+                        alt="Second slide"
+                    />
+                    
+                </div>
+                <div class="carousel-item">
+                    <img
+                        class="d-block w-100"
+                        src="/img/home/home.png"
+                        alt="Third slide"
+                    />
+                    
+                </div>
+            </div>
+            <a
+                class="carousel-control-prev"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="prev"
+            >
+                <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a
+                class="carousel-control-next"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="next"
+            >
+                <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
         <div class="wrapper">
             <div class="container">
                 <div class="wrapper-content">
-                    <div class="header-text">
-                        FOUND 300 SEARCH RESULTS FOR
+            
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6 wrapper-content-one">
+                            <h6>Uyo, Akwa Ibom</h6>
+                            <h2>Ibom Estate</h2>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6 wrapper-content-two">
+                            <span class="wrapper-content-two-one">N4.5m</span><span class="wrapper-content-two-two">/plot</span>
+                        </div>
                     </div>
-                    <div class="header-title">UYO, 4 ROOMS, AKWA IBOM, SELL</div>
-                    <div class="button-edit">
+                    <div class="grid mt-5">
                         <div class="">
-                            <div>
-                                <div class="btn btn-rent">BUY</div>
-                                <div class="btn btn-buy">RENT</div>
-                            </div>
+                            <img src="/img/icon/icon_12.png" alt="" srcset=""><span>3 Bedrooms</span>
                         </div>
+                        <div class="">
+                            <img src="/img/icon/icon_13.png" alt="" srcset=""><span>4 Restrooms</span>
+                        </div>
+                        <div class="">
+                            <img src="/img/icon/icon_5.png" alt="" srcset=""><span>Electricity</span>
+                        </div>
+                        <div class="">
+                            <img src="/img/icon/icon_6.png" alt="" srcset=""><span>Home Library</span>
+                        </div>
+                        
                     </div>
-                    <div class="search-session rounded">
-                        <div class="d-flex">
-                            <span style="margin-top: 0.6rem"
-                                ><font-awesome-icon :icon="['fa', 'search']"
-                            /></span>
-                            <input
-                                class="pl-3"
-                                type="text"
-                                placeholder="Search City, Street,Apartment"
-                            />
+                    <div class="grid mt-4">
+                        <div class="">
+                            <img src="/img/icon/icon_7.png" alt="" srcset=""><span>Parking Lot</span>
                         </div>
-                        <div class="stroke">|</div>
-                        <hr class="line-on-mobile" />
-                        <div class="top-down">
-                            <select class="" id="options">
-                                <option selected disabled>Rooms</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
+                        <div class="">
+                            <img src="/img/icon/icon_8.png" alt="" srcset=""><span>Eatery</span>
                         </div>
-                        <div class="stroke">|</div>
-                        <hr class="line-on-mobile" />
-                        <div class="top-down">
-                            <select class="" id="options">
-                                <option selected disabled>State</option>
-                                <option>2</option>
-                            </select>
+                        <div class="">
+                            <img src="/img/icon/icon_10.png" alt="" srcset=""><span>4 Square Fts</span>
                         </div>
-                        <div class="btn btn-search top-down">Search</div>
+                        <div class="">
+                            <img src="/img/icon/icon_11.png" alt="" srcset=""><span>Quiet Environment</span>
+                        </div>
+                        
                     </div>
-                    <div class="angle-edit">
-                        <font-awesome-icon
-                            :icon="['fa', 'angle-double-down']"
-                        />
-                    </div>
+                    <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Make Enquiry
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <p class="modal-title" id="exampleModalLabel">Make an Enquiry</p>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <div>
+                                                <label for="">Name</label>
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    placeholder="John Doe"
+                                                />
+                                            </div>
+                                            <div class="mt-1">
+                                                <label for="">Phone Number</label>
+                                                <input
+                                                    type="number"
+                                                    class="form-control"
+                                                    placeholder="080"
+                                                />
+                                            </div>
+                                            <div class="mt-1">
+                                                <label for="">Email Address</label>
+                                                <input
+                                                    type="email"
+                                                    class="form-control"
+                                                    placeholder="johndoe@gmail.com"
+                                                />
+                                            </div>
+                                            <div class="mt-1">
+                                                <label for="">Property</label>
+                                                <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    placeholder="Uyo Estates"
+                                                />
+                                            </div>
+                                            <div class="mt-1">
+                                                <label for="">Message</label>
+                                                <textarea name="" id="" class="form-control w-100"></textarea>
+                                            </div>
+                                            
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                       <div class="btn btn-send mt-4 w-100" data-bs-dismiss="modal">Message Us</div>
+                                    </div>
+                                    </div>
+                                </div>
+                                </div>
                 </div>
             </div>
             
         </div>
-        <div class="home-container">
+        <div class="home-container mt-5">
         <div class="">
             <!-- cards -->
             <div class="container">
@@ -406,18 +532,127 @@ export default {};
 * {
     font-family: sofiaPro;
 }
+.form-edit {
+    padding: 1rem 0 0 0;
+}
+.form-head {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #002817;
+}
+label {
+    color: #002817;
+    font-style: normal;
+    font-weight: bold;
+}
+input {
+    background: #eff0f7;
+    width: 70%;
+}
+textarea {
+    background: #eff0f7;
+    width: 70%;
+}
+.btn-send {
+    background: #08804b;
+    border-radius: 6px;
+    text-align: center;
+    color: #fff;
+    width: 70%;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.btn-success{
+    width:75%;
+    display: block;
+    margin: auto;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    background-color: #08804B;
+    font-size: 1.5rem;
+}
+.carousel{
+    margin:auto;
+    width: 90%;
+    margin-bottom: 3rem;
+}
+.carousel-item {
+    height: auto;
+}
+.carousel-indicators li {
+    /* border-radius: 100%; */
+    background-color: #08804b;
+}
+.carousel-indicators {
+    bottom: -50px;
+}
+.carousel-caption {
+    width: 100% !important;
+    position: absolute;
+    right: 15%;
+    bottom: 0 !important;
+    left: 0 !important;
+    z-index: 10;
+    padding: 20px !important;
+    color: #fff;
+    background: rgba(28, 28, 28, 0.36) !important;
+    backdrop-filter: blur(8px) !important;
+    text-align: left !important;
+}
+h5 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 46px;
+    /* identical to box height */
+    letter-spacing: 0.02em;
+    color: #ffffff;
+}
 .wrapper {
     background: white;
-    height: 50vh;
-    margin-bottom: 1rem;
+    height: 65vh;
     background-size: cover;
     background-position: center;
+
 }
 .wrapper-content {
     margin: auto;
-    width: 70%;
+    width: 90%;
     padding-top: 2rem;
 }
+.wrapper-content img{
+    width: 3rem;
+    margin-right: 0.8rem;
+}
+.wrapper-content-one h6{
+    font-size: 20px;
+    color: #08804B;
+    text-transform: uppercase;
+}
+.wrapper-content-one h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+.wrapper-content-two{
+    text-align: right;
+    padding-top: 1.5rem;
+}
+.wrapper-content-two-one{
+    font-size: 40px;
+    font-weight: bold;
+}
+.wrapper-content-two-two{
+    font-size: 25px;
+}
+
 .header-title {
     font-style: normal;
     font-weight: bold;
@@ -854,17 +1089,49 @@ ul li {
     margin: 7rem 5rem 7rem 8rem;
 }
 @media screen and (max-width: 578px) {
+    .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-gap: 1rem;
+}
+    .carousel-item {
+        height: auto;
+    }
     .wrapper {
         background: white;
-        height: 91.6vh;
-        margin-bottom: 17rem;
+        height: 120.6vh;
         background-size: cover;
         background-position: center;
+        margin-bottom: 22rem;
     }
+    .btn-success{
+    width:100%;
+    display: block;
+    margin: auto;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    background-color: #08804B;
+    font-size: 1rem;
+}
     .wrapper-content {
         margin: auto;
         width: 100%;
         padding-top: 2rem;
+    }
+    .wrapper-content-one{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}   
+    .wrapper-content img{
+    width: 1.5rem;
+    margin-right: 0.8rem;
+}
+    .wrapper-content-two{
+        text-align: center;
+        padding-top: 1.5rem;
     }
     .header-title {
         font-style: normal;
@@ -917,13 +1184,28 @@ ul li {
         width: 100%;
         padding-top: 1rem;
     }
+    .btn-success{
+    width:100%;
+    display: block;
+    margin: auto;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    background-color: #08804B;
+    font-size: 1rem;
+}
     .wrapper {
         background: white;
-        height: 60vh;
+        height: 70vh;
         background-size: cover;
         background-position: center;
-        margin-bottom: 3rem;
+        margin-bottom: 9rem;
     }
+        .wrapper-content img{
+    width: 1.5rem;
+    margin-right: 0.8rem;
+}
 }
 
 @media screen and (max-width: 1024px) {
@@ -967,7 +1249,7 @@ ul li {
     }
     .wrapper {
         background: white;
-        height: 50vh;
+        height: 40vh;
         background-size: cover;
         background-position: center;
     }

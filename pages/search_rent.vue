@@ -856,6 +856,7 @@ ul li {
         background: white;
         height: 91.6vh;
         background-size: cover;
+        margin-bottom: 17rem;
         background-position: center;
     }
     .wrapper-content {
@@ -918,6 +919,7 @@ ul li {
         background: white;
         height: 60vh;
         background-size: cover;
+        margin-bottom: 3rem;
         background-position: center;
     }
 }
