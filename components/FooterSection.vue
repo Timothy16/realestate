@@ -14,12 +14,21 @@
             </p>
             <p class="text-1">07063499427, 08026674533</p>
             <div class="mt-3">
-                <div class="quick-link mb-2">QUICK LINKS</div>
-                <ul class="mt-2">
+                <h5 class="footer-text">QUICK LINKS</h5>
+                <ul>
                     <li>Featured Listings</li>
                     <li>About Us</li>
                     <li>Contact Us</li>
                 </ul>
+                <h5 class="footer-text">FOLLOW US</h5>
+                <ul>
+                    <li><img src="/img/icon/ins.png" alt="" srcset="" class="footer-img"></li>
+                    <li><img src="/img/icon/lin.png" alt="" srcset="" class="footer-img"></li>
+                    <li><img src="/img/icon/fa.png" alt="" srcset="" class="footer-img"></li>
+                    <li><img src="/img/icon/tw.png" alt="" srcset="" class="footer-img"></li>
+                </ul>
+                <hr>
+                <p class="text-1">Copyright 2021 - JayCee & Jay Ltd. All Rights Reserved.</p>
             </div>
             <div class="mt-3">
                 <div class="quick-link">FOLLOW US</div>
@@ -67,7 +76,7 @@
 .text-1 {
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 24px;
     color: rgba(233, 255, 245, 0.76);
     margin-top: 0.8rem;
@@ -81,33 +90,26 @@ ul li {
     text-decoration: none;
     display: inline;
     font-style: normal;
-    /* font-weight: bold; */
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 15px;
     line-height: 22px;
     letter-spacing: 1.5px;
     color: #e9fff5;
     margin: 0 1.5rem 0 0;
 }
-.quick-link {
-    font-style: normal;
+.footer-text{
+    color:#08804B;
     font-weight: bold;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: 0.06em;
-    color: #08804b;
 }
-.line-footer {
+.footer-img{
+    width: 2rem;
+    margin-top: 0.7rem;
+}
+hr{
     border: 1px solid rgba(233, 255, 245, 0.35);
-}
-.copy-right {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: 0.05em;
-    color: rgba(233, 255, 245, 0.76);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 90%;
+    margin-top: 1rem;
 }
 @media screen and (max-width: 578px) {
     ul li {
@@ -122,5 +124,9 @@ ul li {
         color: #e9fff5;
         margin: 0 1.5rem 0 0;
     }
+    .footer-img{
+    width: 2rem;
+    margin-top: 0.7rem;
+}
 }
 </style>

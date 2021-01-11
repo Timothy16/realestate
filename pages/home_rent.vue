@@ -10,8 +10,8 @@
                     <div class="button-edit">
                         <div class="">
                             <div>
-                                <div class="btn btn-buy">BUY</div>
-                                <div class="btn btn-rent">RENT</div>
+                                <div class="btn btn-rent">BUY</div>
+                                <div class="btn btn-buy">RENT</div>
                             </div>
                         </div>
                     </div>
@@ -865,7 +865,7 @@ export default {};
 .wrapper-content {
     margin: auto;
     width: 70%;
-    padding-top: 20rem;
+    padding-top: 10rem;
 }
 .header-title {
     font-style: normal;
@@ -902,6 +902,7 @@ export default {};
     color: #fff;
     padding-left: 3rem;
     padding-right: 3rem;
+    margin-left: -4px;
 }
 .btn-rent {
     background: #ffffff;
@@ -910,7 +911,7 @@ export default {};
     padding-left: 3rem;
     padding-right: 3rem;
     position: relative;
-    left: -4px;
+    
 }
 .search-session {
     background: #fff;
@@ -1167,7 +1168,7 @@ ul li {
     line-height: 32px;
     text-align: right;
     letter-spacing: 0.02em;
-    color: #02be20;
+    color: #15024D;
     text-decoration: underline;
     cursor: pointer;
     /* margin: 1rem 8rem 3rem 5rem; */
@@ -1280,7 +1281,7 @@ ul li {
     line-height: 32px;
     text-align: center;
     letter-spacing: 0.02em;
-    color: #02be20;
+    color: #15024D;
     text-decoration: underline;
     cursor: pointer;
 }
