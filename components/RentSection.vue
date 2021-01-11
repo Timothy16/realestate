@@ -160,7 +160,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row mt-5">
+                <div class="row box-down">
                     <div class="col-sm-12 col-md-12 col-lg-4">
                         <div class="card top-down shadow rounded">
                             <img
@@ -323,6 +323,13 @@
 </template>
 
 <style scoped>
+@font-face {
+    font-family: sofiaPro;
+    src: url("/font/sofiaProRegular.ttf");
+}
+* {
+    font-family: sofiaPro;
+}
 .style-container {
     margin: 3rem 5rem 3rem 8rem;
 }
@@ -334,6 +341,10 @@
     text-align: center;
     letter-spacing: 0.1em;
     color: #5e5c5c;
+}
+
+.box-down {
+    margin-top: 3rem;
 }
 .border-line {
     margin: auto;
@@ -431,6 +442,9 @@ ul li {
     }
 } */
 @media screen and (max-width: 1024px) {
+    .box-down {
+        margin-top: 1rem;
+    }
     .style-container {
         margin: 1rem;
     }

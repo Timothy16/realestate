@@ -10,8 +10,12 @@
                     <div class="button-edit">
                         <div class="">
                             <div>
-                                <div class="btn btn-buy">BUY</div>
-                                <div class="btn btn-rent">RENT</div>
+                                <nuxt-link to="/search_buy">
+                                    <div class="btn btn-buy">BUY</div>
+                                </nuxt-link>
+                                <nuxt-link to="/search_rent"
+                                    ><div class="btn btn-rent">RENT</div>
+                                </nuxt-link>
                             </div>
                         </div>
                     </div>
@@ -72,7 +76,8 @@
             rgba(0, 4, 23, 0.58)
         ),
         url("/img/hero/hero.png");
-    height: 91.6vh;
+    height: auto;
+    padding-bottom: 1rem;
     background-size: cover;
     background-position: center;
 }
@@ -194,7 +199,8 @@ option {
                 rgba(0, 4, 23, 0.58)
             ),
             url("/img/hero/hero.png");
-        height: 91.6vh;
+        height: auto;
+        padding-bottom: 1rem;
         background-size: cover;
         background-position: center;
     }
@@ -206,7 +212,7 @@ option {
     .header-title {
         font-style: normal;
         font-weight: bold;
-        font-size: 48px;
+        font-size: 24px;
         line-height: 58px;
         text-align: center;
         letter-spacing: 0.02em;
@@ -228,6 +234,7 @@ option {
     .search-session {
         padding: 1rem;
         display: block;
+        margin-top: 1rem;
     }
     .stroke {
         display: none;
@@ -242,12 +249,27 @@ option {
         display: block;
         color: #afafaf;
     }
+    .button-edit {
+        margin-top: 1rem;
+    }
 }
 @media screen and (min-width: 710px) and (max-width: 1024px) {
     .wrapper-content {
         margin: auto;
         width: 100%;
         padding-top: 16rem;
+    }
+    .wrapper {
+        background: linear-gradient(
+                to right,
+                rgba(0, 4, 23, 0.58),
+                rgba(0, 4, 23, 0.58)
+            ),
+            url("/img/hero/hero.png");
+        height: auto;
+        padding-bottom: 1rem;
+        background-size: cover;
+        background-position: center;
     }
 }
 </style>

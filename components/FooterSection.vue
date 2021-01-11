@@ -30,6 +30,29 @@
                 <hr>
                 <p class="text-1">Copyright 2021 - JayCee & Jay Ltd. All Rights Reserved.</p>
             </div>
+            <div class="mt-3">
+                <div class="quick-link">FOLLOW US</div>
+                <ul class="mt-2">
+                    <li>
+                        <img src="/img/icon/facebook.png" alt="" srcset="" />
+                    </li>
+                    <li>
+                        <img src="/img/icon/linkdin.png" alt="" srcset="" />
+                    </li>
+                    <li>
+                        <img src="/img/icon/instagram.png" alt="" srcset="" />
+                    </li>
+                    <li>
+                        <img src="/img/icon/twitter.png" alt="" srcset="" />
+                    </li>
+                </ul>
+            </div>
+            <div class="container">
+                <hr class="line-footer" />
+            </div>
+            <div class="copy-right">
+                copyright 2021 - JayCee & Jay Ltd. All rights reserved
+            </div>
         </div>
     </div>
 </template>
@@ -47,7 +70,7 @@
 }
 .footer-bg {
     background: #001e11;
-    padding: 5rem 0 2rem 0;
+    padding: 5rem 0 1rem 0;
     text-align: center;
 }
 .text-1 {
