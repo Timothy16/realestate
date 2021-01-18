@@ -44,10 +44,14 @@
                         </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
-                        <div class="btn btn-login" type="submit">Login</div>
-                        <div class="btn btn-create ml-3" type="submit">
-                            Create Account
-                        </div>
+                        <nuxt-link to="/login">
+                            <div class="btn btn-login" type="submit">Login</div>
+                        </nuxt-link>
+                        <nuxt-link to="/signup">
+                            <div class="btn btn-create ml-3" type="submit">
+                                Create Account
+                            </div>
+                        </nuxt-link>
                     </form>
                 </div>
             </nav>
