@@ -28,13 +28,13 @@
         grid-template-columns: 1fr 1fr;
     }
     .one{
-        height: 100vh;
+        height: 80vh;
         background: white;
         padding-left: 10vh;
         padding-right: 10vh;
     }
     .two{
-        padding-top: 15vh;
+        padding-top: 10vh;
     }
     .two h1{
         color: #00321C;
@@ -102,7 +102,7 @@
         grid-template-columns: 1fr;
     }
      .one{
-        height: 90vh;
+        height: 80vh;
         background: linear-gradient(
             to right,
             rgba(0, 4, 23, 0.58),
@@ -135,7 +135,7 @@
 
     @media(min-width:579px) and (max-width:769px){
         .one{
-        height: 100vh;
+        height: 80vh;
         padding-left: 3vh;
         padding-right: 3vh;
     }
@@ -143,7 +143,7 @@
     }
     @media(min-width:770px) and (max-width:1200px){
         .one{
-        height: 100vh;
+        height: 80vh;
         padding-left: 3vh;
         padding-right: 3vh;
     }
