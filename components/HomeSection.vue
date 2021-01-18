@@ -58,7 +58,9 @@
                                </ul>
                             </p>
                         </div>
+                        <nuxt-link to="/about_property">
                         <div class="card-footer">More Information</div>
+                        </nuxt-link>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-4">
@@ -356,6 +358,9 @@
 }
 * {
     font-family: sofiaPro;
+}
+a {
+    text-decoration: none !important;
 }
 .home-container {
     background: rgba(42, 0, 162, 0.03);
