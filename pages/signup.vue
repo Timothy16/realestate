@@ -8,18 +8,14 @@
                         <h1>Create Account</h1>
                         <p>To make an enquiry</p>
                         <div class="three">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="John Doe" />
-                            <label for="">Phone Number</label>
-                            <input type="" placeholder="0123456789" />
-                            <label for="">Email Address</label>
+                            <input type="text" placeholder="Name" />
+                            <input type="" placeholder="Phone Number" />
                             <input
                                 type="email"
-                                placeholder="johndoe@gmail.com"
+                                placeholder="Email"
                             />
-                            <label for="">Password</label>
-                            <input type="password" placeholder="*******" />
-                            <button type="submit">Submit</button>
+                            <input type="password" placeholder="Password" />
+                            <button type="submit">Sign Up</button>
                         </div>
                     </div>
                 </div>
@@ -49,18 +45,19 @@
     color: #08804b;
     font-size: 24px;
     margin-top: -1vh;
+    margin-bottom: 2rem;
 }
 .three input {
     display: block;
-    margin-bottom: 2vh;
+    margin-bottom:3vh;
     width: 100%;
     background: #eff0f7;
     border-radius: 10px;
     border: none;
     padding-left: 1vh;
     padding-top: 1vh;
-    padding-bottom: 1vh;
-    border: 2px solid #14142b;
+    padding-bottom:1vh;
+    border: 1px solid #00321c;
 }
 .three button {
     margin-bottom: 2vh;
