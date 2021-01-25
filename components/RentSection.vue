@@ -5,59 +5,65 @@
             <div class="border-line"></div>
             <!-- cards -->
             <div class="mt-5">
-                <div class="row">
+                <div class="row" v-for="(info,index) in rentItems" :key="index">
                     <div class="col-sm-12 col-md-12 col-lg-4">
                         <div class="card shadow rounded">
-                            <img
-                                src="/img/home/home.png"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <span class="city">Uyo, Akwa Ibom</span>
-                                <div class="d-flex justify-content-between">
-                                    <div class="title">Three Bedroom Flat</div>
-                                    <div>
-                                        <span class="price">&#8358;4.5m</span
-                                        >/plot
-                                    </div>
-                                </div>
-                                <div class="icons">
-                                    <ul>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_1.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_2.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_3.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_4.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                    </ul>
+                        <img
+                            :src="info.photo_main"
+                            class="card-img-top"
+                            alt="..."
+                        />
+                        <div class="card-body">
+                            <span class="city">{{info.address}}, {{info.city}}, {{info.state}}</span>
+                            <div class="d-flex justify-content-between">
+                                <div class="title">{{info.title}}</div>
+                                <div>
+                                    <span class="price">&#8358;{{info.price}}</span>/plot
                                 </div>
                             </div>
+                             <div class="icons">
+                                <ul>
+                                    <li>
+                                        <img src="/img/icon/icon_1.png" alt="" srcset="">
+                                    </li>
+                                    <li>
+                                        <img src="/img/icon/icon_2.png" alt="" srcset="">
+                                    </li>
+                                    <li>
+                                        <img src="/img/icon/icon_3.png" alt="" srcset="">
+                                    </li>
+                                    <li>
+                                        <img src="/img/icon/icon_4.png" alt="" srcset="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="mt-1">
+                               <ul>
+                                   <li>
+                                       {{info.bedrooms}} Bedroom(s)
+                                   </li>
+                                   <li>
+                                      {{info.bathrooms}} Restroom(s)
+                                   </li>
+                               </ul>
+                            </p>
+                             <p class="mt-1">
+                               <ul>
+                                   <li>
+                                      {{info.sqft}} Square Fts
+                                   </li>
+                                   <li style="margin-left : .7rem">
+                                      CCTV Surveillance
+                                   </li>
+                               </ul>
+                            </p>
                         </div>
+                        <nuxt-link to="/about_property">
+                        <div class="card-footer">More Information</div>
+                        </nuxt-link>
                     </div>
-                    <div class="col-sm-12 col-md-12 col-lg-4">
+                    </div>
+                    <!-- <div class="col-sm-12 col-md-12 col-lg-4">
                         <div class="card top-down rounded shadow">
                             <img
                                 src="/img/home/home.png"
@@ -158,9 +164,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="row box-down">
+                <!-- <div class="row box-down">
                     <div class="col-sm-12 col-md-12 col-lg-4">
                         <div class="card top-down shadow rounded">
                             <img
@@ -314,13 +320,34 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="view-more mt-4">View More</div>
         </div>
         <!-- button More -->
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            rentItems:{},
+        }
+    },
+    mounted(){
+        this.getRentItems()
+    },
+    methods:{
+        getRentItems(){
+        this.$axios.get("https://api.jayceeandjay.com/rents", {headers : {'Content-Type':'application/json'}}).then((res)=> {
+               this.rentItems=res.data.results;
+               console.log(this.rentItems)
+         }) 
+    },
+}
+};
+
+</script>
 
 <style scoped>
 @font-face {
