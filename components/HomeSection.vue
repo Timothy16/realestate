@@ -5,20 +5,20 @@
             <div class="border-line"></div>
             <!-- cards -->
             <div class="container">
-            <div class="row mt-5">
+            <div class="row mt-5" v-for="(info,index) in salesItems" :key="index">
                 <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="card shadow rounded">
                         <img
-                            src="/img/home/home.png"
+                            :src="info.photo_main"
                             class="card-img-top"
                             alt="..."
                         />
                         <div class="card-body">
-                            <span class="city">Uyo, Akwa Ibom</span>
+                            <span class="city">{{info.address}}, {{info.city}}, {{info.state}}</span>
                             <div class="d-flex justify-content-between">
-                                <div class="title">Three Bedroom Flat</div>
+                                <div class="title">{{info.title}}</div>
                                 <div>
-                                    <span class="price">&#8358;4.5m</span>/plot
+                                    <span class="price">&#8358;{{info.price}}</span>/plot
                                 </div>
                             </div>
                              <div class="icons">
@@ -40,17 +40,17 @@
                             <p class="mt-1">
                                <ul>
                                    <li>
-                                       Three Bedroom
+                                       {{info.bedrooms}} Bedroom(s)
                                    </li>
                                    <li>
-                                       Three Restroom
+                                      {{info.bathrooms}} Restroom(s)
                                    </li>
                                </ul>
                             </p>
                              <p class="mt-1">
                                <ul>
                                    <li>
-                                      24 Square Fts
+                                      {{info.sqft}} Square Fts
                                    </li>
                                    <li style="margin-left : .7rem">
                                       CCTV Surveillance
@@ -63,7 +63,7 @@
                         </nuxt-link>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
+                <!-- <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="card top-down rounded shadow">
                         <img
                             src="/img/home/home.png"
@@ -172,9 +172,9 @@
                         </div>
                         <div class="card-footer">More Information</div>
                     </div>
-                </div>
+                </div> -->
             </div>
-             <div class="row box-down">
+             <!-- <div class="row box-down">
                 <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="card top-down shadow rounded">
                         <img
@@ -340,7 +340,7 @@
                         <div class="card-footer">More Information</div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- button More -->
             <div class="view-more mt-4">
                 View More 
@@ -350,7 +350,27 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            salesItems:{}
+        }
+    },
+    mounted(){
+        this.getSalesItems()
+    },
+    methods:{
+    getSalesItems(){
+        this.$axios.get("https://api.jayceeandjay.com/sales", {headers : {'Content-Type':'application/json'}}).then((res)=> {
+               this.salesItems=res.data.results;
+               console.log(this.salesItems)
+         }) 
+    },
+}
+};
 
+</script>
 <style scoped>
 @font-face {
     font-family: sofiaPro;
