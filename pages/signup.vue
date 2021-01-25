@@ -4,18 +4,24 @@
             <div class="grid mb-5">
                 <div class="four"></div>
                 <div class="one">
-                    <div class="two mt-5">
+                    <div class="two mt-3">
                         <h1>Create Account</h1>
                         <p>To make an enquiry</p>
                         <div class="three">
-                            <input type="text" placeholder="Name" />
-                            <input type="" placeholder="Phone Number" />
+                            <form action="" @submit.prevent="register">
+                                <input type="text" placeholder="Username" v-model="loginInfo.username" />
+                            <input type="text" placeholder="First Name" v-model="loginInfo.first_name" />
+                            <input type="text" placeholder=" Last Name" v-model="loginInfo.last_name" />
                             <input
                                 type="email"
                                 placeholder="Email"
+                                v-model="loginInfo.email"
                             />
-                            <input type="password" placeholder="Password" />
-                            <button type="submit">Sign Up</button>
+                            <input type="password" placeholder="Password" v-model="loginInfo.password"/>
+                            <input type="password" placeholder="Verify Password" v-model="loginInfo.verify_password"/>
+                            <button type="submit">Create Account</button>
+                            </form>
+                            
                         </div>
                     </div>
                 </div>
@@ -23,6 +29,36 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            loginInfo : {
+                username:'',
+                first_name : '',
+                last_name : '',
+                password : '',
+                email:'',
+                verify_password:'',
+
+            },
+            registrationResponse:{}
+             
+        }
+    },
+    methods:{
+        register(){
+             this.$axios.post('https://api.jayceeandjay.com/accounts/register', this.loginInfo,
+              {headers : {'Content-Type':'application/json'}}).then((res)=> {
+                this.registrationResponse=res.data;
+               console.log(this.registrationResponse)
+
+            })
+           
+        },
+    }
+}
+</script>
 <style scoped>
 .grid {
     display: grid;

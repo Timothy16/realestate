@@ -58,8 +58,65 @@
         <div class="">
             <!-- cards -->
             <div class="container">
-            <div class="row mt-2">
+            <div class="row mt-2" v-for="(info,index) in rentItems" :key="index">
                 <div class="col-sm-12 col-md-12 col-lg-4">
+                        <div class="card shadow rounded">
+                        <img
+                            :src="info.photo_main"
+                            class="card-img-top"
+                            alt="..."
+                        />
+                        <div class="card-body">
+                            <span class="city">{{info.address}}, {{info.city}}, {{info.state}}</span>
+                            <div class="d-flex justify-content-between">
+                                <div class="title">{{info.title}}</div>
+                                <div>
+                                    <span class="price">&#8358;{{info.price}}</span>/plot
+                                </div>
+                            </div>
+                             <div class="icons">
+                                <ul>
+                                    <li>
+                                        <img src="/img/icon/icon_1.png" alt="" srcset="">
+                                    </li>
+                                    <li>
+                                        <img src="/img/icon/icon_2.png" alt="" srcset="">
+                                    </li>
+                                    <li>
+                                        <img src="/img/icon/icon_3.png" alt="" srcset="">
+                                    </li>
+                                    <li>
+                                        <img src="/img/icon/icon_4.png" alt="" srcset="">
+                                    </li>
+                                </ul>
+                            </div>
+                            <p class="mt-1">
+                               <ul>
+                                   <li>
+                                       {{info.bedrooms}} Bedroom(s)
+                                   </li>
+                                   <li>
+                                      {{info.bathrooms}} Restroom(s)
+                                   </li>
+                               </ul>
+                            </p>
+                             <p class="mt-1">
+                               <ul>
+                                   <li>
+                                      {{info.sqft}} Square Fts
+                                   </li>
+                                   <li style="margin-left : .7rem">
+                                      CCTV Surveillance
+                                   </li>
+                               </ul>
+                            </p>
+                        </div>
+                        <nuxt-link to="/about_property">
+                        <div class="card-footer">More Information</div>
+                        </nuxt-link>
+                    </div>
+                    </div>
+                <!-- <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="card shadow rounded">
                         <img
                             src="/img/home/home.png"
@@ -126,43 +183,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card shadow rounded">
-                        <img
-                            src="/img/home/home.png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <span class="city">Uyo, Akwa Ibom</span>
-                            <div class="d-flex justify-content-between">
-                                <div class="title">Ibom Estate</div>
-                                <div>
-                                    <span class="price">&#8358;4.5m</span>/plot
-                                </div>
-                            </div>
-                             <div class="icons">
-                                <ul>
-                                    <li>
-                                        <img src="/img/icon/icon_1.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_2.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_3.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_4.png" alt="" srcset="">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
             </div>
-             <div class="row mt-5">
+             <!-- <div class="row mt-5">
                 <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="card shadow rounded">
                         <img
@@ -369,7 +392,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- button More -->
             </div>
             
@@ -384,7 +407,49 @@
                     <carousel-property />
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-6">
-                    <form-management />
+                     <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-edit">
+        <div class="form-head">PROPERTY MANAGEMENT</div>
+        <p class="mt-2">
+            Great article. I wonder if there is a way this can be learned?
+        </p>
+        <form action="" @submit.prevent="message">
+            <div>
+                <input
+                    type="text"
+                    class="form-control input"
+                    placeholder="Full Name"
+                    v-model="messageInfo.name"
+                />
+            </div>
+            <div class="mt-1">
+                <input
+                    type="email"
+                    class="form-control input"
+                    placeholder="Email Address"
+                    v-model="messageInfo.email"
+                />
+            </div>
+            <div class="mt-1">
+                <input
+                    type="text"
+                    class="form-control input"
+                    placeholder="Phone Number"
+                    v-model="messageInfo.phone"
+                />
+            </div>
+            <div class="mt-1">
+                <textarea name="" 
+                id="" 
+                class="form-control input" 
+                placeholder="Message"
+                v-model="messageInfo.message"
+                ></textarea>
+            </div>
+            <button class="btn btn-send mt-4" type="submit">Message Us</button>
+        </form>
+    </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -394,7 +459,44 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data(){
+        return{
+            rentItems:{},
+             messageInfo : {
+                name:'',
+                email : '',
+                phone : '',
+                message : '',
+                sale_id: '1',
+                sale: '2',
+                user_id: '1',
+            },
+        }
+    },
+    mounted(){
+        this.searchRentItems()
+    },
+    methods:{
+        searchRentItems(){
+        this.$axios.get("https://api.jayceeandjay.com/rentsearch", {headers : {'Content-Type':'application/json'}}).then((res)=> {
+               this.rentItems=res.data.results;
+               console.log(this.rentItems)
+         }) 
+    },
+    message(){
+             this.$axios.post('https://api.jayceeandjay.com/salecontact/', this.messageInfo,
+              {headers : {'Content-Type':'application/json'}}).then((res)=> {
+                this.messageResponse=res.data;
+               console.log(this.messageResponse)
+
+            })
+           
+        },
+    
+}
+};
+
 </script>
 
 <style scoped>
@@ -404,6 +506,39 @@ export default {};
 }
 * {
     font-family: sofiaPro;
+}
+.form-edit {
+    padding: 1rem 0 0 0;
+}
+.form-head {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #002817;
+}
+label {
+    color: #002817;
+    font-style: normal;
+    font-weight: bold;
+}
+.input {
+    background: #eff0f7;
+    width: 70%;
+    margin-bottom: 1rem;
+}
+textarea {
+    background: #eff0f7;
+    width: 70%;
+}
+.btn-send {
+    background: #08804b;
+    border-radius: 6px;
+    text-align: center;
+    color: #fff;
+    width: 70%;
 }
 .wrapper {
     background: white;
@@ -908,6 +1043,18 @@ ul li {
     .style-container {
         margin: 1rem;
     }
+    .input {
+    background: #eff0f7;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+    .btn-send {
+    background: #08804b;
+    border-radius: 6px;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
 }
 @media screen and (min-width: 710px) and (max-width: 1024px) {
     .wrapper-content {
@@ -921,6 +1068,9 @@ ul li {
         background-size: cover;
         margin-bottom: 3rem;
         background-position: center;
+    }
+    .form-edit{
+        margin-top: 3vh;
     }
 }
 
