@@ -11,24 +11,23 @@
 
 <script>
 export default {
-    data(){
-        return{
-            stuff:{ }
-        }
+    data() {
+        return {
+            stuff: {},
+        };
     },
-    mounted(){
-        this.getStuff()
+    mounted() {
+        this.getStuff();
     },
-    methods:{
-        getStuff(){
-        this.$axios.get("https://api.jayceeandjay.com/rents", {headers : {'Content-Type':'application/json'}}).then((res)=> {
-               this.stuff=res.data;
-               console.log(this.stuff)
-         }) 
+    methods: {
+        // getStuff() {
+        //     this.$axios.get("/rents").then((res) => {
+        //         this.stuff = res.data;
+        //         console.log(this.stuff);
+        //     });
+        // },
     },
-}
 };
-
 </script>
 
 <style scoped>

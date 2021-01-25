@@ -14,7 +14,7 @@ export default {
     ],
     script: [
       {
-        src: "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js", 
+        src: "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js",
         type: "text/javascript"
       },
       {
@@ -53,6 +53,8 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
+
     [
       'nuxt-fontawesome', {
         imports: [
@@ -68,7 +70,17 @@ export default {
       }
     ]
   ],
-
+  axios: {
+    // proxy: true
+  },
+  // proxy: {
+  //   '/api': {
+  //     target: 'https://api.jayceeandjay.com',
+  //     pathRewrite: {
+  //       '^/api': ''
+  //     }
+  //   }
+  // },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   },
