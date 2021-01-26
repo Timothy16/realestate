@@ -7,12 +7,17 @@
                     <div class="two">
                         <h1>Login</h1>
                         <div class="three">
-                            <input
+                            <form action="" @submit.prevent="login">
+                                <input
                                 type="email"
                                 placeholder="Email Address"
+                                v-model="loginInfo.email"
                             />
-                            <input type="password" placeholder="Password" />
+                            <input type="password" placeholder="Password" 
+                            v-model="loginInfo.password"/>
                             <button type="submit">Log In</button>
+                            </form>
+                            
                         </div>
                     </div>
                 </div>
@@ -20,6 +25,33 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            loginInfo : {
+                username:'',
+                password : '',
+                email:'',
+
+            },
+            registrationResponse:{}
+             
+        }
+    },
+    methods:{
+        login(){
+             this.$axios.post('https://api.jayceeandjay.com/rest-auth/login/', this.loginInfo,
+              {headers : {'Content-Type':'application/json'}}).then((res)=> {
+                this.registrationResponse=res.data;
+               console.log(this.registrationResponse)
+
+            })
+           
+        },
+    }
+}
+</script>
 <style scoped>
 .grid {
     display: grid;

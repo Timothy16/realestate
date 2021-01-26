@@ -58,8 +58,8 @@
         <div class="">
             <!-- cards -->
             <div class="container">
-            <div class="row mt-2" v-for="(info,index) in rentItems" :key="index">
-                <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="row mt-2">
+                <div class="col-sm-12 col-md-12 col-lg-4" v-for="(info,index) in rentItems" :key="index">
                         <div class="card shadow rounded">
                         <img
                             :src="info.photo_main"
@@ -111,9 +111,7 @@
                                </ul>
                             </p>
                         </div>
-                        <nuxt-link to="/about_property">
-                        <div class="card-footer">More Information</div>
-                        </nuxt-link>
+                        <div class="card-footer" @click="displayInfo(info.id)">More Information</div>
                     </div>
                     </div>
                 <!-- <div class="col-sm-12 col-md-12 col-lg-4">
@@ -398,62 +396,9 @@
             
         </div>
     </div>
+         <property-managment />
         
         
-        <div>
-        <div class="container mt-5 mb-5">
-            <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-6">
-                    <carousel-property />
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-6">
-                     <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="form-edit">
-        <div class="form-head">PROPERTY MANAGEMENT</div>
-        <p class="mt-2">
-            Great article. I wonder if there is a way this can be learned?
-        </p>
-        <form action="" @submit.prevent="message">
-            <div>
-                <input
-                    type="text"
-                    class="form-control input"
-                    placeholder="Full Name"
-                    v-model="messageInfo.name"
-                />
-            </div>
-            <div class="mt-1">
-                <input
-                    type="email"
-                    class="form-control input"
-                    placeholder="Email Address"
-                    v-model="messageInfo.email"
-                />
-            </div>
-            <div class="mt-1">
-                <input
-                    type="text"
-                    class="form-control input"
-                    placeholder="Phone Number"
-                    v-model="messageInfo.phone"
-                />
-            </div>
-            <div class="mt-1">
-                <textarea name="" 
-                id="" 
-                class="form-control input" 
-                placeholder="Message"
-                v-model="messageInfo.message"
-                ></textarea>
-            </div>
-            <button class="btn btn-send mt-4" type="submit">Message Us</button>
-        </form>
-    </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </div>
     </div>
     
 </template>
@@ -493,6 +438,9 @@ export default {
             })
            
         },
+        displayInfo(info){
+        this.$router.push(`/rent/${info}`)
+    }
     
 }
 };

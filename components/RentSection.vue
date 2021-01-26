@@ -5,8 +5,8 @@
             <div class="border-line"></div>
             <!-- cards -->
             <div class="mt-5">
-                <div class="row" v-for="(info,index) in rentItems" :key="index">
-                    <div class="col-sm-12 col-md-12 col-lg-4">
+                <div class="row" >
+                    <div class="col-sm-12 col-md-12 col-lg-4" v-for="(info,index) in rentItems" :key="index">
                         <div class="card shadow rounded">
                         <img
                             :src="info.photo_main"
@@ -58,9 +58,8 @@
                                </ul>
                             </p>
                         </div>
-                        <nuxt-link to="/about_property">
-                        <div class="card-footer">More Information</div>
-                        </nuxt-link>
+                        <div class="card-footer" @click="displayInfo(info.id)">More Information</div>
+                    
                     </div>
                     </div>
                     <!-- <div class="col-sm-12 col-md-12 col-lg-4">
@@ -344,6 +343,9 @@ export default {
                console.log(this.rentItems)
          }) 
     },
+        displayInfo(info){
+        this.$router.push(`/rent/${info}`)
+    }
 }
 };
 

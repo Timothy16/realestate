@@ -12,7 +12,7 @@
                 >
                 Eti Osa LGA, Lagos State.
             </p>
-            <p class="text-1">07063499427, 08026674533</p>
+            <p class="text-1">0817 777 0262, 0702 500 0770</p>
             <div class="mt-3">
                 <h5 class="footer-text">QUICK LINKS</h5>
                 <ul>
