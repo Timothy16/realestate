@@ -48,7 +48,7 @@ export default {
     },
     methods:{
         register(){
-             this.$axios.post('https://api.jayceeandjay.com/accounts/register', this.loginInfo,
+             this.$axios.post('https://api.jayceeandjay.com/accounts/register/', this.loginInfo,
               {headers : {'Content-Type':'application/json'}}).then((res)=> {
                 this.registrationResponse=res.data;
                console.log(this.registrationResponse)

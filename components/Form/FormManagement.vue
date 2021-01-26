@@ -1,34 +1,81 @@
 <template>
     <div class="form-edit">
         <div class="form-head">PROPERTY MANAGEMENT</div>
-        <p class="mt-2">
-            Great article. I wonder if there is a way this can be learned?
+        <p>
+            Please message us with your details & requirements, and we will get in touch,
+            to satisfy your every property maintenance/ service need!!!
         </p>
-        <form action="">
+        <form action="" @submit.prevent="messages">
             <div>
-                <label for="">Full Name</label>
                 <input
                     type="text"
-                    class="form-control"
-                    placeholder="Enter full name"
+                    class="form-control input"
+                    placeholder="Full Name"
+                    v-model="messageInfo.name"
                 />
             </div>
             <div class="mt-1">
-                <label for="">Email Address</label>
                 <input
                     type="email"
-                    class="form-control"
-                    placeholder="Enter email address"
+                    class="form-control input"
+                    placeholder="Email Address"
+                    v-model="messageInfo.email"
                 />
             </div>
             <div class="mt-1">
-                <label for="">Message</label>
-                <textarea name="" id="" class="form-control"></textarea>
+                <textarea name="" 
+                id="" 
+                class="form-control input" 
+                placeholder="Message"
+                v-model="messageInfo.context"
+                ></textarea>
             </div>
-            <div class="btn btn-send mt-4">Message Us</div>
+            <button class="btn btn-send mt-4" type="submit">Message Us</button>
         </form>
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            salesItems:{},
+            messageResponse:{},
+            messageInfo : {
+                name:'',
+                email : '',
+                context : '',
+            },
+        }
+    },
+    mounted(){
+        this.searchSalesItems()
+    },
+    methods:{
+    searchSalesItems(){
+        this.$axios.get("https://api.jayceeandjay.com/salesearch", {headers : {'Content-Type':'application/json'}}).then((res)=> {
+               this.salesItems=res.data.results;
+               console.log(this.salesItems)
+         }) 
+    },
+    messages(){
+             this.$axios.post('https://api.jayceeandjay.com/propertymanagement/', this.messageInfo,
+              {headers : {'Content-Type':'application/json'}}).then((res)=> {
+                  
+                this.messageResponse=res.data;
+
+               console.log(this.messageResponse);
+               this.$message({
+            message:"Message Recieved!!!",
+            type: "success",
+          });
+
+            })
+           
+        },
+}
+};
+
+</script>
 <style scoped>
 .form-edit {
     padding: 1rem 0 0 0;
@@ -41,6 +88,7 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #002817;
+    margin-bottom: 1rem;
 }
 label {
     color: #002817;
@@ -50,6 +98,7 @@ label {
 input {
     background: #eff0f7;
     width: 70%;
+    margin-bottom: 1.5rem;
 }
 textarea {
     background: #eff0f7;
