@@ -11,6 +11,7 @@
                     type="text"
                     class="form-control input"
                     placeholder="Full Name"
+                    required
                     v-model="messageInfo.name"
                 />
             </div>
@@ -19,6 +20,7 @@
                     type="email"
                     class="form-control input"
                     placeholder="Email Address"
+                    required
                     v-model="messageInfo.email"
                 />
             </div>
@@ -27,6 +29,7 @@
                 id="" 
                 class="form-control input" 
                 placeholder="Message"
+                required
                 v-model="messageInfo.context"
                 ></textarea>
             </div>
@@ -72,7 +75,10 @@ export default {
             type: "success",
           });this.messageInfo={};
 
-            })
+            }).catch((error) => {
+          console.log(error);
+        
+        });
            
         },
 }
