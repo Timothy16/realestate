@@ -27,9 +27,9 @@
                     id="navbarSupportedContent"
                 >
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link" href="#">Featured Listings</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <nuxt-link to="/about-us" class="nav-link"
                                 >About Us</nuxt-link
@@ -43,7 +43,7 @@
                             >
                         </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
+                    <!-- <form class="form-inline my-2 my-lg-0">
                         <nuxt-link to="/login">
                             <div class="btn btn-login" type="submit">Login</div>
                         </nuxt-link>
@@ -52,7 +52,7 @@
                                 Create Account
                             </div>
                         </nuxt-link>
-                    </form>
+                    </form> -->
                 </div>
             </nav>
         </div>

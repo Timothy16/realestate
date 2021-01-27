@@ -192,6 +192,15 @@
                                             />
                                         </div>
                                         <div class="mt-1">
+                                            <label for="">Property Name</label>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Ewet Housing Estate"
+                                                v-model="messageInfo.sale"
+                                            />
+                                        </div>
+                                        <div class="mt-1">
                                             <label for="">Email Address</label>
                                             <input
                                                 type="email"
@@ -747,7 +756,7 @@ export default {
                 phone : '',
                 message : '',
                 sale_id: '1',
-                sale: '2',
+                sale: '',
                 user_id: '1',
             },
         }
@@ -759,7 +768,8 @@ export default {
         getDisplayInfo(){
             this.$axios.get(`https://api.jayceeandjay.com/sales/${this.$route.params.id}`).then((res)=> {
                this.displayInfo=res.data;
-               console.log(this.displayInfo)
+               console.log(this.displayInfo);
+               this.messageInfo.sale = this.displayInfo.title;
          }) 
         },
         messages(){
