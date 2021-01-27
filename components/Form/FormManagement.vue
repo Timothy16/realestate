@@ -35,7 +35,10 @@
     </div>
 </template>
 <script>
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 export default {
+    
     data(){
         return{
             salesItems:{},
@@ -65,9 +68,9 @@ export default {
 
                console.log(this.messageResponse);
                this.$message({
-            message:"Message Recieved!!!",
+            message:"Message Sent!",
             type: "success",
-          });
+          });this.messageInfo={};
 
             })
            

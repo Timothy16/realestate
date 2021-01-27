@@ -181,7 +181,7 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="" @submit.prevent="message">
+                                    <form action="" @submit.prevent="messages">
                                         <div>
                                             <label for="">Name</label>
                                             <input
@@ -737,6 +737,8 @@
 </template>
 
 <script>
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 export default {
     data(){
         return{
@@ -762,11 +764,16 @@ export default {
                console.log(this.displayInfo)
          }) 
         },
-         message(){
+         messages(){
              this.$axios.post('https://api.jayceeandjay.com/rentcontact/', this.messageInfo,
               {headers : {'Content-Type':'application/json'}}).then((res)=> {
+                  this.$message({
+            message:"Message Sent!",
+            type: "success",
+          });this.messageInfo={};
                 this.messageResponse=res.data;
-               console.log(this.messageResponse)
+               console.log(this.messageResponse);
+               
 
             })
            
