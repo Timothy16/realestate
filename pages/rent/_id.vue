@@ -192,6 +192,15 @@
                                             />
                                         </div>
                                         <div class="mt-1">
+                                            <label for="">Property Name</label>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Ewet Housing Estate"
+                                                v-model="messageInfo.rent"
+                                            />
+                                        </div>
+                                        <div class="mt-1">
                                             <label for="">Email Address</label>
                                             <input
                                                 type="email"
@@ -749,7 +758,7 @@ export default {
                 phone : '',
                 message : '',
                 rent_id: '1',
-                rent: '2',
+                rent: '',
                 user_id: '1',
             },
         }
@@ -761,7 +770,8 @@ export default {
         getDisplayInfo(){
             this.$axios.get(`https://api.jayceeandjay.com/Rents/${this.$route.params.id}`).then((res)=> {
                this.displayInfo=res.data;
-               console.log(this.displayInfo)
+               console.log(this.displayInfo);
+               this.messageInfo.rent = this.displayInfo.title;
          }) 
         },
          messages(){
