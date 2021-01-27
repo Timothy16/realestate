@@ -182,22 +182,24 @@
                                 </div>
                                 <div class="modal-body">
                                     <form action="" @submit.prevent="messages">
-                                        <div>
-                                            <label for="">Name</label>
-                                            <input
-                                                type="text"
-                                                class="form-control"
-                                                placeholder="John Doe"
-                                                v-model="messageInfo.name"
-                                            />
-                                        </div>
                                         <div class="mt-1">
                                             <label for="">Property Name</label>
                                             <input
                                                 type="text"
                                                 class="form-control"
                                                 placeholder="Ewet Housing Estate"
+                                                required
                                                 v-model="messageInfo.sale"
+                                            />
+                                        </div>
+                                        <div>
+                                            <label for="">Name</label>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="John Doe"
+                                                required
+                                                v-model="messageInfo.name"
                                             />
                                         </div>
                                         <div class="mt-1">
@@ -206,6 +208,7 @@
                                                 type="email"
                                                 class="form-control"
                                                 placeholder="johndoe@gmail.com"
+                                                 required
                                                 v-model="messageInfo.email"
                                             />
                                         </div>
@@ -216,6 +219,7 @@
                                                 class="form-control"
                                                 placeholder="08012345678"
                                                 v-model="messageInfo.phone"
+                                                 required
                                             />
                                         </div>
                                         <div class="mt-1">
@@ -225,6 +229,7 @@
                                                 id=""
                                                 class="form-control w-100"
                                                 v-model="messageInfo.message"
+                                                 required
                                             ></textarea>
                                         </div>
                                         <div class="modal-footer">
@@ -782,7 +787,9 @@ export default {
                 this.messageResponse=res.data;
                console.log(this.messageResponse)
 
-            })
+            }).catch((error) => {
+          console.log(error);
+        });
            
         },
     }
