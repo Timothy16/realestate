@@ -321,7 +321,8 @@
                     </div>
                 </div> -->
             </div>
-            <div class="view-more mt-4">View More</div>
+            <nuxt-link to="/more_rent"><div class="view-more mt-4">View More</div></nuxt-link>
+            
         </div>
         <!-- button More -->
     </div>
