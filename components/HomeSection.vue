@@ -370,15 +370,11 @@ export default {
                     console.log(this.salesItems);
                 });
         },
-    },
-<<<<<<< HEAD
-=======
-    displayInfo(info){
+         displayInfo(info){
         this.$router.push(`/sales/${info}`)
     }
 }
->>>>>>> 56815afdd2dc75c9569748a19ee1661437060fb0
-};
+}
 </script>
 <style scoped>
 @font-face {
