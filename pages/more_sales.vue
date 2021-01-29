@@ -1,66 +1,16 @@
 <template>
-    <div>
-        <div class="wrapper">
-            <div class="container">
-                <div class="wrapper-content">
-                    <div class="header-text">
-                        FOUND 300 SEARCH RESULTS FOR
-                    </div>
-                    <div class="header-title">UYO, 4 ROOMS, AKWA IBOM, SELL</div>
-                    <div class="button-edit">
-                        <div class="">
-                            <div>
-                                <div class="btn btn-buy">BUY</div>
-                                <div class="btn btn-rent">RENT</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="search-session rounded">
-                        <div class="d-flex">
-                            <span style="margin-top: 0.6rem"
-                                ><font-awesome-icon :icon="['fa', 'search']"
-                            /></span>
-                            <input
-                                class="pl-3"
-                                type="text"
-                                placeholder="Search City, Street,Apartment"
-                            />
-                        </div>
-                        <div class="stroke">|</div>
-                        <hr class="line-on-mobile" />
-                        <div class="top-down">
-                            <select class="" id="options">
-                                <option selected disabled>Rooms</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                            </select>
-                        </div>
-                        <div class="stroke">|</div>
-                        <hr class="line-on-mobile" />
-                        <div class="top-down">
-                            <select class="" id="options">
-                                <option selected disabled>State</option>
-                                <option>2</option>
-                            </select>
-                        </div>
-                        <div class="btn btn-search top-down">Search</div>
-                    </div>
-                    <div class="angle-edit">
-                        <font-awesome-icon
-                            :icon="['fa', 'angle-double-down']"
-                        />
-                    </div>
+    <div>    
+        <div class="home-container mt-5">
+            <div class="">
+                <div style="text-align:center">
+                    <h1 class="header-h2">Properties for Sale</h1>
                 </div>
-            </div>
-        </div>
-        <div class="home-container">
-        <div class="">
-            <!-- cards -->
-            <div class="container">
-            <div class="row mt-2">
-                <div class="col-sm-12 col-md-12 col-lg-4" v-for="(info,index) in rentItems" :key="index">
-                        <div class="card shadow rounded">
+                
+                <!-- cards -->
+                <div class="container">
+                    <div class="row mt-5" >
+                <div class="col-sm-12 col-md-12 col-lg-4" v-for="(info,index) in salesItems" :key="index">
+                    <div class="card shadow rounded">
                         <img
                             :src="info.photo_main"
                             class="card-img-top"
@@ -113,9 +63,9 @@
                         </div>
                         <div class="card-footer" @click="displayInfo(info.id)">More Information</div>
                     </div>
-                    </div>
+                </div>
                 <!-- <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card shadow rounded">
+                    <div class="card top-down rounded shadow">
                         <img
                             src="/img/home/home.png"
                             class="card-img-top"
@@ -124,12 +74,12 @@
                         <div class="card-body">
                             <span class="city">Uyo, Akwa Ibom</span>
                             <div class="d-flex justify-content-between">
-                                <div class="title">Ibom Estate</div>
+                                <div class="title">Three Bedroom Flat</div>
                                 <div>
                                     <span class="price">&#8358;4.5m</span>/plot
                                 </div>
                             </div>
-                             <div class="icons">
+                            <div class="icons">
                                 <ul>
                                     <li>
                                         <img src="/img/icon/icon_1.png" alt="" srcset="">
@@ -145,11 +95,32 @@
                                     </li>
                                 </ul>
                             </div>
+                            <p class="mt-1">
+                               <ul>
+                                   <li>
+                                       Three Bedroom
+                                   </li>
+                                   <li>
+                                       Three Restroom
+                                   </li>
+                               </ul>
+                            </p>
+                             <p class="mt-1">
+                               <ul>
+                                   <li>
+                                      24 Square Fts
+                                   </li>
+                                   <li style="margin-left : .7rem">
+                                      CCTV Surveillance
+                                   </li>
+                               </ul>
+                            </p>
                         </div>
+                        <div class="card-footer">More Information</div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card shadow rounded">
+                    <div class="card top-down rounded shadow">
                         <img
                             src="/img/home/home.png"
                             class="card-img-top"
@@ -158,7 +129,7 @@
                         <div class="card-body">
                             <span class="city">Uyo, Akwa Ibom</span>
                             <div class="d-flex justify-content-between">
-                                <div class="title">Ibom Estate</div>
+                                <div class="title">Three Bedroom Flat</div>
                                 <div>
                                     <span class="price">&#8358;4.5m</span>/plot
                                 </div>
@@ -179,276 +150,78 @@
                                     </li>
                                 </ul>
                             </div>
+                            <p class="mt-1">
+                               <ul>
+                                   <li>
+                                       Three Bedroom
+                                   </li>
+                                   <li>
+                                       Three Restroom
+                                   </li>
+                               </ul>
+                            </p>
+                             <p class="mt-1">
+                               <ul>
+                                   <li>
+                                      24 Square Fts
+                                   </li>
+                                   <li style="margin-left : .7rem">
+                                      CCTV Surveillance
+                                   </li>
+                               </ul>
+                            </p>
                         </div>
+                        <div class="card-footer">More Information</div>
                     </div>
                 </div> -->
+                    </div>
+                    <!-- button More -->
+                </div>
             </div>
-             <!-- <div class="row mt-5">
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card shadow rounded">
-                        <img
-                            src="/img/home/home.png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <span class="city">Uyo, Akwa Ibom</span>
-                            <div class="d-flex justify-content-between">
-                                <div class="title">Ibom Estate</div>
-                                <div>
-                                    <span class="price">&#8358;4.5m</span>/plot
-                                </div>
-                            </div>
-                             <div class="icons">
-                                <ul>
-                                    <li>
-                                        <img src="/img/icon/icon_1.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_2.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_3.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_4.png" alt="" srcset="">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+        </div>
+
+        <div>
+            <div class="container mt-5 mb-5">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                        <carousel-property />
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card shadow rounded">
-                        <img
-                            src="/img/home/home.png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <span class="city">Uyo, Akwa Ibom</span>
-                            <div class="d-flex justify-content-between">
-                                <div class="title">Ibom Estate</div>
-                                <div>
-                                    <span class="price">&#8358;4.5m</span>/plot
-                                </div>
-                            </div>
-                             <div class="icons">
-                                <ul>
-                                    <li>
-                                        <img src="/img/icon/icon_1.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_2.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_3.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_4.png" alt="" srcset="">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card shadow rounded">
-                        <img
-                            src="/img/home/home.png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <span class="city">Uyo, Akwa Ibom</span>
-                            <div class="d-flex justify-content-between">
-                                <div class="title">Ibom Estate</div>
-                                <div>
-                                    <span class="price">&#8358;4.5m</span>/plot
-                                </div>
-                            </div>
-                             <div class="icons">
-                                <ul>
-                                    <li>
-                                        <img src="/img/icon/icon_1.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_2.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_3.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_4.png" alt="" srcset="">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="col-sm-12 col-md-12 col-lg-6">
+                        <form-management />
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card shadow rounded">
-                        <img
-                            src="/img/home/home.png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <span class="city">Uyo, Akwa Ibom</span>
-                            <div class="d-flex justify-content-between">
-                                <div class="title">Ibom Estate</div>
-                                <div>
-                                    <span class="price">&#8358;4.5m</span>/plot
-                                </div>
-                            </div>
-                             <div class="icons">
-                                <ul>
-                                    <li>
-                                        <img src="/img/icon/icon_1.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_2.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_3.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_4.png" alt="" srcset="">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card shadow rounded">
-                        <img
-                            src="/img/home/home.png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <span class="city">Uyo, Akwa Ibom</span>
-                            <div class="d-flex justify-content-between">
-                                <div class="title">Ibom Estate</div>
-                                <div>
-                                    <span class="price">&#8358;4.5m</span>/plot
-                                </div>
-                            </div>
-                             <div class="icons">
-                                <ul>
-                                    <li>
-                                        <img src="/img/icon/icon_1.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_2.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_3.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_4.png" alt="" srcset="">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card shadow rounded">
-                        <img
-                            src="/img/home/home.png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <span class="city">Uyo, Akwa Ibom</span>
-                            <div class="d-flex justify-content-between">
-                                <div class="title">Ibom Estate</div>
-                                <div>
-                                    <span class="price">&#8358;4.5m</span>/plot
-                                </div>
-                            </div>
-                             <div class="icons">
-                                <ul>
-                                    <li>
-                                        <img src="/img/icon/icon_1.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_2.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_3.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_4.png" alt="" srcset="">
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <!-- button More -->
-            </div>
-            
         </div>
     </div>
-         <property-managment />
-        
-        
-    </div>
-    
 </template>
 
 <script>
 export default {
     data(){
         return{
-            rentItems:{},
-             messageInfo : {
-                name:'',
-                email : '',
-                phone : '',
-                message : '',
-                sale_id: '1',
-                sale: '2',
-                user_id: '1',
-            },
+            salesItems:{}
         }
     },
     mounted(){
-        this.searchRentItems()
+        this.getSalesItems()
     },
     methods:{
-        searchRentItems(){
-        this.$axios.get("https://api.jayceeandjay.com/rentsearch", {headers : {'Content-Type':'application/json'}}).then((res)=> {
-               this.rentItems=res.data.results;
-               console.log(this.rentItems)
+    getSalesItems(){
+        this.$axios.get("https://api.jayceeandjay.com/sales", {headers : {'Content-Type':'application/json'}}).then((res)=> {
+               this.salesItems=res.data.results;
+               console.log(this.salesItems)
          }) 
     },
-    message(){
-             this.$axios.post('https://api.jayceeandjay.com/salecontact/', this.messageInfo,
-              {headers : {'Content-Type':'application/json'}}).then((res)=> {
-                this.messageResponse=res.data;
-               console.log(this.messageResponse)
-
-            })
-           
-        },
-        displayInfo(info){
-        this.$router.push(`/rent/${info}`)
+    displayInfo(info){
+        this.$router.push(`/sales/${info}`)
     }
-    
 }
 };
 
 </script>
 
 <style scoped>
-    @font-face {
+@font-face {
     font-family: sofiaPro;
     src: url("/font/sofiaProRegular.ttf");
 }
@@ -467,15 +240,19 @@ export default {
     text-transform: uppercase;
     color: #002817;
 }
+.header-h2{
+    margin-left: auto;
+    margin-right: auto;
+    color: #08804b;
+}
 label {
     color: #002817;
     font-style: normal;
     font-weight: bold;
 }
-.input {
+input {
     background: #eff0f7;
     width: 70%;
-    margin-bottom: 1rem;
 }
 textarea {
     background: #eff0f7;
@@ -488,17 +265,94 @@ textarea {
     color: #fff;
     width: 70%;
 }
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.btn-success {
+    width: 75%;
+    display: block;
+    margin: auto;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    background-color: #08804b;
+    font-size: 1.5rem;
+}
+.carousel {
+    margin: auto;
+    width: 90%;
+    margin-bottom: 3rem;
+}
+.carousel-item {
+    height: auto;
+}
+.carousel-indicators li {
+    /* border-radius: 100%; */
+    background-color: #08804b;
+}
+.carousel-indicators {
+    bottom: -50px;
+}
+.carousel-caption {
+    width: 100% !important;
+    position: absolute;
+    right: 15%;
+    bottom: 0 !important;
+    left: 0 !important;
+    z-index: 10;
+    padding: 20px !important;
+    color: #fff;
+    background: rgba(28, 28, 28, 0.36) !important;
+    backdrop-filter: blur(8px) !important;
+    text-align: left !important;
+}
+h5 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 46px;
+    /* identical to box height */
+    letter-spacing: 0.02em;
+    color: #ffffff;
+}
 .wrapper {
     background: white;
-    height: 50vh;
+    height: 65vh;
     background-size: cover;
     background-position: center;
 }
 .wrapper-content {
     margin: auto;
-    width: 70%;
+    width: 90%;
     padding-top: 2rem;
 }
+.wrapper-content img {
+    width: 3rem;
+    margin-right: 0.8rem;
+}
+.wrapper-content-one h6 {
+    font-size: 20px;
+    color: #08804b;
+    text-transform: uppercase;
+}
+.wrapper-content-one h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+.wrapper-content-two {
+    text-align: right;
+    padding-top: 1.5rem;
+}
+.wrapper-content-two-one {
+    font-size: 40px;
+    font-weight: bold;
+}
+.wrapper-content-two-two {
+    font-size: 25px;
+}
+
 .header-title {
     font-style: normal;
     font-weight: bold;
@@ -506,8 +360,7 @@ textarea {
     line-height: 38px;
     text-align: center;
     letter-spacing: 0.02em;
-    color: #08804B;
-;
+    color: #08804b;
     /* text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.25); */
     /* backdrop-filter: blur(44px); */
     text-transform: uppercase;
@@ -536,16 +389,15 @@ textarea {
     color: #fff;
     padding-left: 3rem;
     padding-right: 3rem;
-    
+    margin-left: -5px;
 }
 .btn-rent {
-    background:#EBF5F1;
+    background: #ebf5f1;
     border-radius: 0px 4px 4px 0px;
     color: #08804b;
     padding-left: 3rem;
     padding-right: 3rem;
     position: relative;
-    margin-left: -5px;
 }
 .search-session {
     background: #fff;
@@ -553,7 +405,7 @@ textarea {
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
-    border: #EBF5F1 1px solid;
+    border: #ebf5f1 1px solid;
     border-radius: 10px;
 }
 ::placeholder {
@@ -935,17 +787,49 @@ ul li {
     margin: 7rem 5rem 7rem 8rem;
 }
 @media screen and (max-width: 578px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+    .carousel-item {
+        height: auto;
+    }
     .wrapper {
         background: white;
-        height: 91.6vh;
+        height: 120.6vh;
         background-size: cover;
-        margin-bottom: 17rem;
         background-position: center;
+        margin-bottom: 22rem;
+    }
+    .btn-success {
+        width: 100%;
+        display: block;
+        margin: auto;
+        margin-top: 2.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 2.5rem;
+        background-color: #08804b;
+        font-size: 1rem;
     }
     .wrapper-content {
         margin: auto;
         width: 100%;
         padding-top: 2rem;
+    }
+    .wrapper-content-one {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .wrapper-content img {
+        width: 1.5rem;
+        margin-right: 0.8rem;
+    }
+    .wrapper-content-two {
+        text-align: center;
+        padding-top: 1.5rem;
     }
     .header-title {
         font-style: normal;
@@ -954,7 +838,7 @@ ul li {
         line-height: 30px;
         text-align: center;
         letter-spacing: 0.02em;
-        color:#08804B;
+        color: #08804b;
         /* text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.25); */
         /* backdrop-filter: blur(44px); */
         text-transform: uppercase;
@@ -991,18 +875,6 @@ ul li {
     .style-container {
         margin: 1rem;
     }
-    .input {
-    background: #eff0f7;
-    width: 100%;
-    margin-bottom: 1rem;
-}
-    .btn-send {
-    background: #08804b;
-    border-radius: 6px;
-    text-align: center;
-    color: #fff;
-    width: 100%;
-}
 }
 @media screen and (min-width: 710px) and (max-width: 1024px) {
     .wrapper-content {
@@ -1010,15 +882,27 @@ ul li {
         width: 100%;
         padding-top: 1rem;
     }
+    .btn-success {
+        width: 100%;
+        display: block;
+        margin: auto;
+        margin-top: 2.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 2.5rem;
+        background-color: #08804b;
+        font-size: 1rem;
+    }
     .wrapper {
         background: white;
-        height: 60vh;
+        height: 70vh;
         background-size: cover;
-        margin-bottom: 3rem;
         background-position: center;
+        margin-bottom: 9rem;
     }
-    .form-edit{
-        margin-top: 3vh;
+    .wrapper-content img {
+        width: 1.5rem;
+        margin-right: 0.8rem;
     }
 }
 
@@ -1035,12 +919,6 @@ ul li {
     }
     .top-down {
         margin-top: 0.5rem;
-    }
-    .wrapper {
-        background: white;
-        height: 50vh;
-        background-size: cover;
-        background-position: center;
     }
 
     /* rentsection */
@@ -1066,6 +944,12 @@ ul li {
     }
     .top-down {
         margin-top: 0.5rem;
+    }
+    .wrapper {
+        background: white;
+        height: 40vh;
+        background-size: cover;
+        background-position: center;
     }
 }
 </style>

@@ -11,6 +11,10 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: "https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" },
       { rel: 'stylesheet', href: "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" },
+      {
+        href: "https://unpkg.com/element-ui/lib/theme-chalk/index.css",
+        rel: "stylesheet"
+      },
     ],
     script: [
       {
@@ -29,6 +33,10 @@ export default {
         src: "https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js",
         type: "text/javascript"
       },
+      {
+        scr: "https://unpkg.com/element-ui/lib/index.js",
+        type: "text/javascript"
+      }
     ]
   },
 
@@ -38,7 +46,10 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-
+    {
+      src: "./plugins/element-ui.js",
+      ssr: false
+    },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

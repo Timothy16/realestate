@@ -19,7 +19,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="search-session rounded">
+                    <!-- <div class="search-session rounded">
                         <div class="d-flex">
                             <span style="margin-top: 0.6rem"
                                 ><font-awesome-icon :icon="['fa', 'search']"
@@ -49,7 +49,7 @@
                             </select>
                         </div>
                         <div class="btn btn-search top-down">Search</div>
-                    </div>
+                    </div> -->
                     <div class="angle-edit">
                         <font-awesome-icon
                             :icon="['fa', 'angle-double-down']"

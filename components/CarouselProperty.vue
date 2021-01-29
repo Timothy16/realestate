@@ -107,7 +107,7 @@
     z-index: 10;
     padding: 20px !important;
     color: #fff;
-    background: rgba(28, 28, 28, 0.36) !important;
+    background:#002817 !important;
     backdrop-filter: blur(8px) !important;
     text-align: left !important;
 }

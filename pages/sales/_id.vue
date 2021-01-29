@@ -16,33 +16,30 @@
                         data-target="#carouselExampleIndicators"
                         data-slide-to="1"
                     ></li>
-                    <li
-                        data-target="#carouselExampleIndicators"
-                        data-slide-to="2"
-                    ></li>
+                    
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img
                             class="d-block w-100"
-                            src="/img/home/home.png"
+                            :src="this.displayInfo.photo_main"
                             alt="First slide"
                         />
                     </div>
                     <div class="carousel-item">
                         <img
                             class="d-block w-100"
-                            src="/img/home/home.png"
+                            :src="this.displayInfo.photo_1"
                             alt="Second slide"
                         />
                     </div>
-                    <div class="carousel-item">
+                    <!-- <div class="carousel-item">
                         <img
                             class="d-block w-100"
-                            src="/img/home/home.png"
+                            :src="this.displayInfo.photo_2"
                             alt="Third slide"
                         />
-                    </div>
+                    </div> -->
                 </div>
                 <a
                     class="carousel-control-prev"
@@ -69,7 +66,7 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
-        </div>
+        
         <div class="wrapper">
             <div class="container">
                 <div class="wrapper-content">
@@ -77,13 +74,13 @@
                         <div
                             class="col-sm-12 col-md-6 col-lg-6 wrapper-content-one"
                         >
-                            <h6>Uyo, Akwa Ibom</h6>
-                            <h2>Ibom Estate</h2>
+                            <h6>{{this.displayInfo.address}}, {{this.displayInfo.city}}, {{this.displayInfo.state}}</h6>
+                            <h2>{{this.displayInfo.title}}</h2>
                         </div>
                         <div
                             class="col-sm-12 col-md-6 col-lg-6 wrapper-content-two"
                         >
-                            <span class="wrapper-content-two-one">N4.5m</span
+                            <span class="wrapper-content-two-one">&#8358;{{this.displayInfo.price}}</span
                             ><span class="wrapper-content-two-two">/plot</span>
                         </div>
                     </div>
@@ -93,14 +90,14 @@
                                 src="/img/icon/icon_12.png"
                                 alt=""
                                 srcset=""
-                            /><span>3 Bedrooms</span>
+                            /><span>{{this.displayInfo.bedrooms}} Bedrooms</span>
                         </div>
                         <div class="">
                             <img
                                 src="/img/icon/icon_13.png"
                                 alt=""
                                 srcset=""
-                            /><span>4 Restrooms</span>
+                            /><span>{{this.displayInfo.bathrooms}} Restrooms</span>
                         </div>
                         <div class="">
                             <img
@@ -123,7 +120,7 @@
                                 src="/img/icon/icon_7.png"
                                 alt=""
                                 srcset=""
-                            /><span>Parking Lot</span>
+                            /><span>{{this.displayInfo.garage}} Parking Lots</span>
                         </div>
                         <div class="">
                             <img
@@ -137,7 +134,7 @@
                                 src="/img/icon/icon_10.png"
                                 alt=""
                                 srcset=""
-                            /><span>4 Square Fts</span>
+                            /><span>{{this.displayInfo.sqft}} Square Fts</span>
                         </div>
                         <div class="">
                             <img
@@ -184,21 +181,25 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
-                                    <form action="">
+                                    <form action="" @submit.prevent="messages">
+                                        <div class="mt-1">
+                                            <label for="">Property Name</label>
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="Ewet Housing Estate"
+                                                required
+                                                v-model="messageInfo.sale"
+                                            />
+                                        </div>
                                         <div>
                                             <label for="">Name</label>
                                             <input
                                                 type="text"
                                                 class="form-control"
                                                 placeholder="John Doe"
-                                            />
-                                        </div>
-                                        <div class="mt-1">
-                                            <label for="">Phone Number</label>
-                                            <input
-                                                type=""
-                                                class="form-control"
-                                                placeholder="080"
+                                                required
+                                                v-model="messageInfo.name"
                                             />
                                         </div>
                                         <div class="mt-1">
@@ -207,14 +208,18 @@
                                                 type="email"
                                                 class="form-control"
                                                 placeholder="johndoe@gmail.com"
+                                                 required
+                                                v-model="messageInfo.email"
                                             />
                                         </div>
                                         <div class="mt-1">
-                                            <label for="">Property</label>
+                                            <label for="">Phone Number</label>
                                             <input
                                                 type="text"
                                                 class="form-control"
-                                                placeholder="Uyo Estates"
+                                                placeholder="08012345678"
+                                                v-model="messageInfo.phone"
+                                                 required
                                             />
                                         </div>
                                         <div class="mt-1">
@@ -223,18 +228,21 @@
                                                 name=""
                                                 id=""
                                                 class="form-control w-100"
+                                                v-model="messageInfo.message"
+                                                 required
                                             ></textarea>
                                         </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <div
+                                        <div class="modal-footer">
+                                    <button
+                                        type="submit"
                                         class="btn btn-send mt-4 w-100"
-                                        data-bs-dismiss="modal"
                                     >
                                         Message Us
-                                    </div>
+                                    </button>
                                 </div>
+                                    </form>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -736,11 +744,56 @@
                 </div>
             </div>
         </div>
+        </div>
     </div>
 </template>
 
 <script>
-export default {};
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+export default {
+    data(){
+        return{
+            displayInfo:{},
+            messageInfo : {
+                name:'',
+                email : '',
+                phone : '',
+                message : '',
+                sale_id: '1',
+                sale: '',
+                user_id: '1',
+            },
+        }
+    },
+    mounted(){
+        this.getDisplayInfo()
+    },
+    methods:{
+        getDisplayInfo(){
+            this.$axios.get(`https://api.jayceeandjay.com/sales/${this.$route.params.id}`).then((res)=> {
+               this.displayInfo=res.data;
+               console.log(this.displayInfo);
+               this.messageInfo.sale = this.displayInfo.title;
+         }) 
+        },
+        messages(){
+             this.$axios.post('https://api.jayceeandjay.com/salecontact/', this.messageInfo,
+              {headers : {'Content-Type':'application/json'}}).then((res)=> {
+                  this.$message({
+            message:"Message Sent!",
+            type: "success",
+          });this.messageInfo={};
+                this.messageResponse=res.data;
+               console.log(this.messageResponse)
+
+            }).catch((error) => {
+          console.log(error);
+        });
+           
+        },
+    }
+};
 </script>
 
 <style scoped>
