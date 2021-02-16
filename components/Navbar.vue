@@ -35,13 +35,13 @@
                                 >About Us</nuxt-link
                             >
                         </li>
+                      
                         <li class="nav-item">
-                            <nuxt-link
-                                :to="{ path: '/', hash: '#footer' }"
-                                class="nav-link"
-                                >Contact Us</nuxt-link
-                            >
+                              <nuxt-link to="#footer" class="nav-link">
+                                 Contact Us
+                             </nuxt-link>
                         </li>
+                       
                     </ul>
                     <!-- <form class="form-inline my-2 my-lg-0">
                         <nuxt-link to="/login">
@@ -83,6 +83,10 @@ export default {
 }
 .style-container {
     margin: 0 5rem 0 8rem;
+}
+.nav-link:hover{
+    color: #08804b !important;
+    border-bottom:2px solid #08804b;
 }
 .btn-login {
     font-style: normal;

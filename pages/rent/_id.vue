@@ -774,14 +774,14 @@ export default {
     },
     methods:{
         getDisplayInfo(){
-            this.$axios.get(`https://api.jayceeandjay.com/Rents/${this.$route.params.id}`).then((res)=> {
+            this.$axios.get(`https://jayceeandjay.online/Rents/${this.$route.params.id}`).then((res)=> {
                this.displayInfo=res.data;
                console.log(this.displayInfo);
                this.messageInfo.rent = this.displayInfo.title;
          }) 
         },
          messages(){
-             this.$axios.post('https://api.jayceeandjay.com/rentcontact/', this.messageInfo,
+             this.$axios.post('https://jayceeandjay.online/rentcontact/', this.messageInfo,
               {headers : {'Content-Type':'application/json'}}).then((res)=> {
                   this.$message({
             message:"Message Sent!",

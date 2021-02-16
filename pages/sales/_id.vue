@@ -771,14 +771,14 @@ export default {
     },
     methods:{
         getDisplayInfo(){
-            this.$axios.get(`https://api.jayceeandjay.com/sales/${this.$route.params.id}`).then((res)=> {
+            this.$axios.get(`https://jayceeandjay.online/sales/${this.$route.params.id}`).then((res)=> {
                this.displayInfo=res.data;
                console.log(this.displayInfo);
                this.messageInfo.sale = this.displayInfo.title;
          }) 
         },
         messages(){
-             this.$axios.post('https://api.jayceeandjay.com/salecontact/', this.messageInfo,
+             this.$axios.post('https://jayceeandjay.online/salecontact/', this.messageInfo,
               {headers : {'Content-Type':'application/json'}}).then((res)=> {
                   this.$message({
             message:"Message Sent!",

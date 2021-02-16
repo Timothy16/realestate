@@ -5,9 +5,10 @@
         <div style="margin-top: 5rem">
             <Nuxt />
         </div>
-        <back-to-top />
+        
         <!-- footer -->
         <footer-section />
+        <back-to-top />
     </div>
 </template>
 

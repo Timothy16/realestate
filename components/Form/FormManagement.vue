@@ -24,6 +24,15 @@
                     v-model="messageInfo.email"
                 />
             </div>
+                <div class="mt-1">
+                <input
+                    type="text"
+                    class="form-control input"
+                    placeholder="Phone Number"
+                    required
+                    v-model="messageInfo.phone"
+                />
+            </div>
             <div class="mt-1">
                 <textarea name="" 
                 id="" 
@@ -50,6 +59,7 @@ export default {
                 name:'',
                 email : '',
                 context : '',
+                phone : ""
             },
         }
     },
@@ -58,13 +68,13 @@ export default {
     },
     methods:{
     searchSalesItems(){
-        this.$axios.get("https://api.jayceeandjay.com/salesearch", {headers : {'Content-Type':'application/json'}}).then((res)=> {
+        this.$axios.get("https://jayceeandjay.online/salesearch", {headers : {'Content-Type':'application/json'}}).then((res)=> {
                this.salesItems=res.data.results;
                console.log(this.salesItems)
          }) 
     },
     messages(){
-             this.$axios.post('https://api.jayceeandjay.com/propertymanagement/', this.messageInfo,
+             this.$axios.post('https://jayceeandjay.online/propertymanagement/', this.messageInfo,
               {headers : {'Content-Type':'application/json'}}).then((res)=> {
                   
                 this.messageResponse=res.data;
@@ -87,7 +97,7 @@ export default {
 </script>
 <style scoped>
 .form-edit {
-    padding: 1rem 0 0 0;
+    padding: 0 0 0 0;
 }
 .form-head {
     font-style: normal;

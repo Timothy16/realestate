@@ -89,7 +89,7 @@
     font-family: sofiaPro;
 }
 .carousel-item {
-    height: 400px;
+    height: 370px;
 }
 .carousel-indicators li {
     /* border-radius: 100%; */

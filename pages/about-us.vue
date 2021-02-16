@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div class="style-container">
-            <div class="row">
+        <div class="container">
+            <div class="row mb-3">
                 <div class="col-sm-12 col-md-12 col-lg-6">
                     <div class="about-header">About Us</div>
                     <div class="line-about"></div>
@@ -68,7 +68,7 @@
     line-height: 28px;
     letter-spacing: 1px;
     color: #002817;
-    margin-top: 5rem;
+    margin-top: 3rem;
 }
 .line-about {
     width: 83px;
@@ -108,6 +108,9 @@
 @media screen and (max-width: 768px) {
     .about-header {
         margin-top: 1rem;
+    }
+    .text-edit{
+        font-size: 18px;
     }
 }
 @media screen and (max-width: 1024px) {

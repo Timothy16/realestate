@@ -7,7 +7,7 @@
                     <div class="header-text">
                         Your Home Realtors you can trust
                     </div>
-                    <div class="button-edit">
+                    <!-- <div class="button-edit">
                         <div class="">
                             <div>
                                 <nuxt-link to="/search_buy">
@@ -18,7 +18,7 @@
                                 </nuxt-link>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- <div class="search-session rounded">
                         <div class="d-flex">
                             <span style="margin-top: 0.6rem"
@@ -50,11 +50,11 @@
                         </div>
                         <div class="btn btn-search top-down">Search</div>
                     </div> -->
-                    <div class="angle-edit">
+                    <!-- <div class="angle-edit">
                         <font-awesome-icon
                             :icon="['fa', 'angle-double-down']"
                         />
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -85,6 +85,7 @@
     margin: auto;
     width: 70%;
     padding-top: 20rem;
+    padding-bottom: 10rem;
 }
 .header-title {
     font-style: normal;
@@ -106,7 +107,7 @@
     text-align: center;
     letter-spacing: 0.02em;
     color: #c9c9c9;
-    margin-top: 0.2rem;
+    margin-top: 1rem;
 }
 .button-edit {
     display: flex;
@@ -208,6 +209,7 @@ option {
         margin: auto;
         width: 100%;
         padding-top: 2rem;
+         padding-bottom: 2rem;
     }
     .header-title {
         font-style: normal;

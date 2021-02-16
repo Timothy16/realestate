@@ -1,15 +1,18 @@
 <template>
     <div>    
-        <div class="home-container mt-5">
+        <div class="home-container mt-1">
+            
             <div class="">
-                <div style="text-align:center">
+                <div class="text-center">
                     <h1 class="header-h2">Properties for Rent</h1>
                 </div>
-                
                 <!-- cards -->
                 <div class="container">
-                    <div class="row mt-5" >
-                <div class="col-sm-12 col-md-12 col-lg-4" v-for="(info,index) in rentItems" :key="index">
+                    <div class="row justify-content-end">
+                        <input type="search" class="form-control" placeholder="Search by State" v-model="filterByLocation">
+                    </div>
+                    <div class="row mt-5"  v-if="rentItems.length > 0">
+                <div class="col-sm-12 col-md-12 col-lg-4 mb-2" v-for="(info,index) in filterAll" :key="index">
                     <div class="card shadow rounded">
                         <img
                             :src="info.photo_main"
@@ -64,116 +67,12 @@
                         <div class="card-footer" @click="displayInfo(info.id)">More Information</div>
                     </div>
                 </div>
-                <!-- <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card top-down rounded shadow">
-                        <img
-                            src="/img/home/home.png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <span class="city">Uyo, Akwa Ibom</span>
-                            <div class="d-flex justify-content-between">
-                                <div class="title">Three Bedroom Flat</div>
-                                <div>
-                                    <span class="price">&#8358;4.5m</span>/plot
-                                </div>
-                            </div>
-                            <div class="icons">
-                                <ul>
-                                    <li>
-                                        <img src="/img/icon/icon_1.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_2.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_3.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_4.png" alt="" srcset="">
-                                    </li>
-                                </ul>
-                            </div>
-                            <p class="mt-1">
-                               <ul>
-                                   <li>
-                                       Three Bedroom
-                                   </li>
-                                   <li>
-                                       Three Restroom
-                                   </li>
-                               </ul>
-                            </p>
-                             <p class="mt-1">
-                               <ul>
-                                   <li>
-                                      24 Square Fts
-                                   </li>
-                                   <li style="margin-left : .7rem">
-                                      CCTV Surveillance
-                                   </li>
-                               </ul>
-                            </p>
-                        </div>
-                        <div class="card-footer">More Information</div>
                     </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card top-down rounded shadow">
-                        <img
-                            src="/img/home/home.png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <span class="city">Uyo, Akwa Ibom</span>
-                            <div class="d-flex justify-content-between">
-                                <div class="title">Three Bedroom Flat</div>
-                                <div>
-                                    <span class="price">&#8358;4.5m</span>/plot
-                                </div>
-                            </div>
-                             <div class="icons">
-                                <ul>
-                                    <li>
-                                        <img src="/img/icon/icon_1.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_2.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_3.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_4.png" alt="" srcset="">
-                                    </li>
-                                </ul>
-                            </div>
-                            <p class="mt-1">
-                               <ul>
-                                   <li>
-                                       Three Bedroom
-                                   </li>
-                                   <li>
-                                       Three Restroom
-                                   </li>
-                               </ul>
-                            </p>
-                             <p class="mt-1">
-                               <ul>
-                                   <li>
-                                      24 Square Fts
-                                   </li>
-                                   <li style="margin-left : .7rem">
-                                      CCTV Surveillance
-                                   </li>
-                               </ul>
-                            </p>
-                        </div>
-                        <div class="card-footer">More Information</div>
+                     <div class="text-center mt-5" v-else>
+                        <Loader />
                     </div>
-                </div> -->
+                    <div class="text-center mt-5" v-if="rentItems.length">
+                        <h6>No more Properties</h6>
                     </div>
                     <!-- button More -->
                 </div>
@@ -199,7 +98,22 @@
 export default {
     data(){
         return{
-            rentItems:{}
+            rentItems:{},
+            filterByLocation : ""
+        }
+    },
+    computed:{
+        filterAll(){
+            try{
+                return this.rentItems.filter((post)=>{
+                    return(
+                        post.state.toLowerCase().match(this.filterByLocation.toLowerCase() || this.filterByLocation.toUpperCase())
+                    )
+                })
+            }
+            catch (error) {
+                console.log(error);
+            }
         }
     },
     mounted(){
@@ -207,7 +121,7 @@ export default {
     },
     methods:{
         getRentItems(){
-        this.$axios.get("https://api.jayceeandjay.com/rents", {headers : {'Content-Type':'application/json'}}).then((res)=> {
+        this.$axios.get("https://jayceeandjay.online/rents", {headers : {'Content-Type':'application/json'}}).then((res)=> {
                this.rentItems=res.data.results;
                console.log(this.rentItems)
          }) 
@@ -251,8 +165,9 @@ label {
     font-weight: bold;
 }
 input {
-    background: #eff0f7;
-    width: 70%;
+    /* background: #eff0f7; */
+    width: 30%;
+    margin-right: 1rem;
 }
 textarea {
     background: #eff0f7;
@@ -413,15 +328,10 @@ h5 {
     font-weight: normal;
     font-size: 12px;
     line-height: 22px;
-    text-align: center;
+    /* text-align: center; */
     letter-spacing: 0.06em;
     color: #afafaf;
     margin-right: 0.5rem;
-}
-input {
-    outline: none;
-    border: none;
-    width: 100%;
 }
 select {
     outline: none;
@@ -787,6 +697,11 @@ ul li {
     margin: 7rem 5rem 7rem 8rem;
 }
 @media screen and (max-width: 578px) {
+    input {
+    /* background: #eff0f7; */
+    width: 70%;
+    margin-right: 1rem;
+}
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;

@@ -5,8 +5,8 @@
             <div class="border-line"></div>
             <!-- cards -->
             <div class="mt-5">
-                <div class="row" >
-                    <div class="col-sm-12 col-md-12 col-lg-4" v-for="(info,index) in rentItems" :key="index">
+                <div class="row" v-if="rentItems.length > 0">
+                    <div class="col-sm-12 col-md-12 col-lg-4 mb-2" v-for="(info,index) in rentItems" :key="index">
                         <div class="card shadow rounded">
                         <img
                             :src="info.photo_main"
@@ -59,270 +59,14 @@
                             </p>
                         </div>
                         <div class="card-footer" @click="displayInfo(info.id)">More Information</div>
-                    
                     </div>
                     </div>
-                    <!-- <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="card top-down rounded shadow">
-                            <img
-                                src="/img/home/home.png"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <span class="city">Uyo, Akwa Ibom</span>
-                                <div class="d-flex justify-content-between">
-                                    <div class="title">Three Bedroom Flat</div>
-                                    <div>
-                                        <span class="price">&#8358;4.5m</span
-                                        >/plot
-                                    </div>
-                                </div>
-                                <div class="icons">
-                                    <ul>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_1.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_2.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_3.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_4.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="card top-down rounded shadow">
-                            <img
-                                src="/img/home/home.png"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <span class="city">Uyo, Akwa Ibom</span>
-                                <div class="d-flex justify-content-between">
-                                    <div class="title">Three Bedroom Flat</div>
-                                    <div>
-                                        <span class="price">&#8358;4.5m</span
-                                        >/plot
-                                    </div>
-                                </div>
-                                <div class="icons">
-                                    <ul>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_1.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_2.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_3.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_4.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
-                <!-- <div class="row box-down">
-                    <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="card top-down shadow rounded">
-                            <img
-                                src="/img/home/home.png"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <span class="city">Uyo, Akwa Ibom</span>
-                                <div class="d-flex justify-content-between">
-                                    <div class="title">Three Bedroom Flat</div>
-                                    <div>
-                                        <span class="price">&#8358;4.5m</span
-                                        >/plot
-                                    </div>
-                                </div>
-                                <div class="icons">
-                                    <ul>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_1.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_2.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_3.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_4.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="card top-down rounded shadow">
-                            <img
-                                src="/img/home/home.png"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <span class="city">Uyo, Akwa Ibom</span>
-                                <div class="d-flex justify-content-between">
-                                    <div class="title">Three Bedroom Flat</div>
-                                    <div>
-                                        <span class="price">&#8358;4.5m</span
-                                        >/plot
-                                    </div>
-                                </div>
-                                <div class="icons">
-                                    <ul>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_1.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_2.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_3.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_4.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-4">
-                        <div class="card top-down rounded shadow">
-                            <img
-                                src="/img/home/home.png"
-                                class="card-img-top"
-                                alt="..."
-                            />
-                            <div class="card-body">
-                                <span class="city">Uyo, Akwa Ibom</span>
-                                <div class="d-flex justify-content-between">
-                                    <div class="title">Three Bedroom Flat</div>
-                                    <div>
-                                        <span class="price">&#8358;4.5m</span
-                                        >/plot
-                                    </div>
-                                </div>
-                                <div class="icons">
-                                    <ul>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_1.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_2.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_3.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                        <li>
-                                            <img
-                                                src="/img/icon/icon_4.png"
-                                                alt=""
-                                                srcset=""
-                                            />
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+                <div class="mt-5" v-else>
+                <Loader />
+            </div>
             </div>
             <nuxt-link to="/more_rent"><div class="view-more mt-4">View More</div></nuxt-link>
-            
         </div>
         <!-- button More -->
     </div>
@@ -339,7 +83,7 @@ export default {
     },
     methods:{
         getRentItems(){
-        this.$axios.get("https://api.jayceeandjay.com/rents", {headers : {'Content-Type':'application/json'}}).then((res)=> {
+        this.$axios.get("https://jayceeandjay.online/rents", {headers : {'Content-Type':'application/json'}}).then((res)=> {
                this.rentItems=res.data.results;
                console.log(this.rentItems)
          }) 
