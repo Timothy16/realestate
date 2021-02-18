@@ -1,36 +1,91 @@
 <template>
     <div>
-        <div>
+        <div class="container">
             <div
                 id="carouselExampleIndicators"
                 class="carousel slide"
                 data-ride="carousel"
+                data-interval="1000"
             >
                 <ol class="carousel-indicators">
-                    <li
+                    <li :class="{imageDisplay : this.displayInfo.photo_main === null}"
                         data-target="#carouselExampleIndicators"
                         data-slide-to="0"
                         class="active"
                     ></li>
-                    <li
+                    <li :class="{imageDisplay : this.displayInfo.photo_1 === null}"
                         data-target="#carouselExampleIndicators"
                         data-slide-to="1"
                     ></li>
-                    
+                    <li :class="{imageDisplay : this.displayInfo.photo_2 === null}"
+                        data-target="#carouselExampleIndicators"
+                        data-slide-to="2"
+                    ></li>
+                    <li :class="{imageDisplay : this.displayInfo.photo_3 === null}"
+                        data-target="#carouselExampleIndicators"
+                        data-slide-to="3"
+                    ></li>
+                    <li :class="{imageDisplay : this.displayInfo.photo_4 === null}"
+                        data-target="#carouselExampleIndicators"
+                        data-slide-to="4"
+                    ></li>
+                    <li :class="{imageDisplay : this.displayInfo.photo_5 === null}"
+                        data-target="#carouselExampleIndicators"
+                        data-slide-to="5"
+                    ></li>
+                    <li :class="{imageDisplay : this.displayInfo.photo_6 === null}"
+                        data-target="#carouselExampleIndicators"
+                        data-slide-to="6"
+                    ></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
+                    <div class="carousel-item active" :class="{imageDisplay : this.displayInfo.photo_main === null}">
                         <img
                             class="d-block w-100"
                             :src="this.displayInfo.photo_main"
-                            alt="First slide"
+                            alt="no image"
                         />
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" :class="{imageDisplay : this.displayInfo.photo_1 === null}">
                         <img
                             class="d-block w-100"
                             :src="this.displayInfo.photo_1"
-                            alt="Second slide"
+                            alt="no image"
+                        />
+                    </div>
+                     <div class="carousel-item" :class="{imageDisplay : this.displayInfo.photo_2 === null}">
+                        <img
+                            class="d-block w-100"
+                            :src="this.displayInfo.photo_2"
+                            alt="no image"
+                        />
+                    </div>
+                     <div class="carousel-item" :class="{imageDisplay : this.displayInfo.photo_3 === null}">
+                        <img
+                            class="d-block w-100"
+                            :src="this.displayInfo.photo_3"
+                            alt="no image"
+                        />
+                    </div>
+                     <div class="carousel-item" :class="{imageDisplay : this.displayInfo.photo_4 === null}">
+                        <img
+                            class="d-block w-100"
+                            :src="this.displayInfo.photo_4"
+                            alt="no image"
+                        />
+                    </div>
+                     <div class="carousel-item" :class="{imageDisplay : this.displayInfo.photo_5 === null}">
+                        <img
+                            class="d-block w-100"
+                            :src="this.displayInfo.photo_5"
+                            alt="no image"
+                        />
+                    </div>
+                     <div class="carousel-item" :class="{imageDisplay : this.displayInfo.photo_6 === null}">
+                        <img
+                            class="d-block w-100"
+                            :src="this.displayInfo.photo_6"
+                            alt="no image"
                         />
                     </div>
                     <!-- <div class="carousel-item">
@@ -806,6 +861,9 @@ export default {
 }
 .form-edit {
     padding: 1rem 0 0 0;
+}
+.imageDisplay{
+    display : none
 }
 .form-head {
     font-style: normal;

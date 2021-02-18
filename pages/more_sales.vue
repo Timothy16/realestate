@@ -1,6 +1,6 @@
 <template>
     <div>    
-        <div class="home-container mt-5">
+        <div class="home-container">
             <div class="">
                 <div style="text-align:center">
                     <h1 class="header-h2">Properties for Sale</h1>
@@ -375,7 +375,7 @@ option {
 /* homesection */
 .home-container {
     background: rgba(42, 0, 162, 0.03);
-    padding: 3rem 0 3rem 0;
+    padding: 1rem 0 3rem 0;
 }
 .style-container {
     margin: 3rem 5rem 0 8rem;
@@ -597,7 +597,7 @@ ul li {
 /* cities */
 .home-container {
     background: rgba(42, 0, 162, 0.03);
-    padding: 3rem 0 4rem 0;
+    padding: 1rem 0 4rem 0;
 }
 .style-container {
     margin: 3rem 5rem 0 8rem;
