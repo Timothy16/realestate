@@ -208,7 +208,6 @@
                     >
                         Make Enquiry
                     </button>
-
                     <!-- Modal -->
                     <div
                         class="modal fade"

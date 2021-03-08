@@ -24,7 +24,7 @@
                             <div class="d-flex justify-content-between">
                                 <div class="title">{{info.title.slice(0,20)}}..</div>
                                 <div>
-                                    <span class="price">&#8358;{{info.price}}</span>
+                                    <span class="price">&#8358;{{info.price.toLocaleString()}}</span>
                                 </div>
                             </div>
                              <div class="icons">
