@@ -106,5 +106,8 @@ export default {
       }
       return window.scrollTo({ top: 0, behavior: 'smooth' })
     }
+  },
+  generate: {
+    fallback: true
   }
 }
