@@ -3,7 +3,7 @@
         <hero-section />
         <home-section />
         <rent-section />
-        <cities />
+        <!-- <cities /> -->
         <border-line />
         <property-managment />
     </div>

@@ -10,15 +10,15 @@
                     <div class="card shadow rounded">
                         <img
                             :src="info.photo_main"
-                            class="card-img-top"
+                            class="card-img-top img-size"
                             alt="..."
                         />
                         <div class="card-body">
-                            <span class="city">{{info.address}}, {{info.city}}, {{info.state}}</span>
+                            <span class="city">{{info.address.slice(0,20)}}.., {{info.city}}, {{info.state}}</span>
                             <div class="d-flex justify-content-between">
-                                <div class="title">{{info.title}}</div>
+                                <div class="title">{{info.title.slice(0,20)}}..</div>
                                 <div>
-                                    <span class="price">&#8358;{{info.price}}</span>/plot
+                                    <span class="price">&#8358;{{info.price}}</span>
                                 </div>
                             </div>
                              <div class="icons">
@@ -61,116 +61,6 @@
                         <div class="card-footer" @click="displayInfo(info.id)">More Information</div>
                     </div>
                 </div>
-                <!-- <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card top-down rounded shadow">
-                        <img
-                            src="/img/home/home.png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <span class="city">Uyo, Akwa Ibom</span>
-                            <div class="d-flex justify-content-between">
-                                <div class="title">Three Bedroom Flat</div>
-                                <div>
-                                    <span class="price">&#8358;4.5m</span>/plot
-                                </div>
-                            </div>
-                            <div class="icons">
-                                <ul>
-                                    <li>
-                                        <img src="/img/icon/icon_1.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_2.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_3.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_4.png" alt="" srcset="">
-                                    </li>
-                                </ul>
-                            </div>
-                            <p class="mt-1">
-                               <ul>
-                                   <li>
-                                       Three Bedroom
-                                   </li>
-                                   <li>
-                                       Three Restroom
-                                   </li>
-                               </ul>
-                            </p>
-                             <p class="mt-1">
-                               <ul>
-                                   <li>
-                                      24 Square Fts
-                                   </li>
-                                   <li style="margin-left : .7rem">
-                                      CCTV Surveillance
-                                   </li>
-                               </ul>
-                            </p>
-                        </div>
-                        <div class="card-footer">More Information</div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="card top-down rounded shadow">
-                        <img
-                            src="/img/home/home.png"
-                            class="card-img-top"
-                            alt="..."
-                        />
-                        <div class="card-body">
-                            <span class="city">Uyo, Akwa Ibom</span>
-                            <div class="d-flex justify-content-between">
-                                <div class="title">Three Bedroom Flat</div>
-                                <div>
-                                    <span class="price">&#8358;4.5m</span>/plot
-                                </div>
-                            </div>
-                             <div class="icons">
-                                <ul>
-                                    <li>
-                                        <img src="/img/icon/icon_1.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_2.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_3.png" alt="" srcset="">
-                                    </li>
-                                    <li>
-                                        <img src="/img/icon/icon_4.png" alt="" srcset="">
-                                    </li>
-                                </ul>
-                            </div>
-                            <p class="mt-1">
-                               <ul>
-                                   <li>
-                                       Three Bedroom
-                                   </li>
-                                   <li>
-                                       Three Restroom
-                                   </li>
-                               </ul>
-                            </p>
-                             <p class="mt-1">
-                               <ul>
-                                   <li>
-                                      24 Square Fts
-                                   </li>
-                                   <li style="margin-left : .7rem">
-                                      CCTV Surveillance
-                                   </li>
-                               </ul>
-                            </p>
-                        </div>
-                        <div class="card-footer">More Information</div>
-                    </div>
-                </div> -->
             </div>
             <div class="mt-5" v-else>
                 <Loader />
@@ -222,6 +112,9 @@ export default {
 }
 a {
     text-decoration: none !important;
+}
+.img-size{
+    height: 300px !important;
 }
 .home-container {
     background: rgba(42, 0, 162, 0.03);

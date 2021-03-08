@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="" v-if="rentItems.length">
         <div class="container mb-3">
             <div class="header-home mt-3">FOR RENT</div>
             <div class="border-line"></div>

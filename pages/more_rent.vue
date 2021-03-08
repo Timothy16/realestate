@@ -24,7 +24,7 @@
                             <div class="d-flex justify-content-between">
                                 <div class="title">{{info.title}}</div>
                                 <div>
-                                    <span class="price">&#8358;{{info.price}}</span>/plot
+                                    <span class="price">&#8358;{{info.price}}</span>
                                 </div>
                             </div>
                              <div class="icons">

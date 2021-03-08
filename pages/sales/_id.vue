@@ -136,7 +136,7 @@
                             class="col-sm-12 col-md-6 col-lg-6 wrapper-content-two"
                         >
                             <span class="wrapper-content-two-one">&#8358;{{this.displayInfo.price}}</span
-                            ><span class="wrapper-content-two-two">/plot</span>
+                            ><span class="wrapper-content-two-two"></span>
                         </div>
                     </div>
                     <div class="grid mt-5">
@@ -304,499 +304,9 @@
                 </div>
             </div>
         </div>
-        <div class="home-container mt-5">
-            <div class="">
-                <!-- cards -->
-                <div class="container">
-                    <div class="row mt-2">
-                        <div class="col-sm-12 col-md-12 col-lg-4">
-                            <div class="card shadow rounded">
-                                <img
-                                    src="/img/home/home.png"
-                                    class="card-img-top"
-                                    alt="..."
-                                />
-                                <div class="card-body">
-                                    <span class="city">Uyo, Akwa Ibom</span>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="title">Ibom Estate</div>
-                                        <div>
-                                            <span class="price"
-                                                >&#8358;4.5m</span
-                                            >/plot
-                                        </div>
-                                    </div>
-                                    <div class="icons">
-                                        <ul>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_1.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_2.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_3.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_4.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-4">
-                            <div class="card shadow rounded">
-                                <img
-                                    src="/img/home/home.png"
-                                    class="card-img-top"
-                                    alt="..."
-                                />
-                                <div class="card-body">
-                                    <span class="city">Uyo, Akwa Ibom</span>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="title">Ibom Estate</div>
-                                        <div>
-                                            <span class="price"
-                                                >&#8358;4.5m</span
-                                            >/plot
-                                        </div>
-                                    </div>
-                                    <div class="icons">
-                                        <ul>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_1.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_2.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_3.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_4.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-4">
-                            <div class="card shadow rounded">
-                                <img
-                                    src="/img/home/home.png"
-                                    class="card-img-top"
-                                    alt="..."
-                                />
-                                <div class="card-body">
-                                    <span class="city">Uyo, Akwa Ibom</span>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="title">Ibom Estate</div>
-                                        <div>
-                                            <span class="price"
-                                                >&#8358;4.5m</span
-                                            >/plot
-                                        </div>
-                                    </div>
-                                    <div class="icons">
-                                        <ul>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_1.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_2.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_3.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_4.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-5">
-                        <div class="col-sm-12 col-md-12 col-lg-4">
-                            <div class="card shadow rounded">
-                                <img
-                                    src="/img/home/home.png"
-                                    class="card-img-top"
-                                    alt="..."
-                                />
-                                <div class="card-body">
-                                    <span class="city">Uyo, Akwa Ibom</span>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="title">Ibom Estate</div>
-                                        <div>
-                                            <span class="price"
-                                                >&#8358;4.5m</span
-                                            >/plot
-                                        </div>
-                                    </div>
-                                    <div class="icons">
-                                        <ul>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_1.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_2.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_3.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_4.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-4">
-                            <div class="card shadow rounded">
-                                <img
-                                    src="/img/home/home.png"
-                                    class="card-img-top"
-                                    alt="..."
-                                />
-                                <div class="card-body">
-                                    <span class="city">Uyo, Akwa Ibom</span>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="title">Ibom Estate</div>
-                                        <div>
-                                            <span class="price"
-                                                >&#8358;4.5m</span
-                                            >/plot
-                                        </div>
-                                    </div>
-                                    <div class="icons">
-                                        <ul>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_1.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_2.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_3.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_4.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-4">
-                            <div class="card shadow rounded">
-                                <img
-                                    src="/img/home/home.png"
-                                    class="card-img-top"
-                                    alt="..."
-                                />
-                                <div class="card-body">
-                                    <span class="city">Uyo, Akwa Ibom</span>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="title">Ibom Estate</div>
-                                        <div>
-                                            <span class="price"
-                                                >&#8358;4.5m</span
-                                            >/plot
-                                        </div>
-                                    </div>
-                                    <div class="icons">
-                                        <ul>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_1.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_2.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_3.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_4.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mt-5">
-                        <div class="col-sm-12 col-md-12 col-lg-4">
-                            <div class="card shadow rounded">
-                                <img
-                                    src="/img/home/home.png"
-                                    class="card-img-top"
-                                    alt="..."
-                                />
-                                <div class="card-body">
-                                    <span class="city">Uyo, Akwa Ibom</span>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="title">Ibom Estate</div>
-                                        <div>
-                                            <span class="price"
-                                                >&#8358;4.5m</span
-                                            >/plot
-                                        </div>
-                                    </div>
-                                    <div class="icons">
-                                        <ul>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_1.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_2.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_3.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_4.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-4">
-                            <div class="card shadow rounded">
-                                <img
-                                    src="/img/home/home.png"
-                                    class="card-img-top"
-                                    alt="..."
-                                />
-                                <div class="card-body">
-                                    <span class="city">Uyo, Akwa Ibom</span>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="title">Ibom Estate</div>
-                                        <div>
-                                            <span class="price"
-                                                >&#8358;4.5m</span
-                                            >/plot
-                                        </div>
-                                    </div>
-                                    <div class="icons">
-                                        <ul>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_1.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_2.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_3.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_4.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-4">
-                            <div class="card shadow rounded">
-                                <img
-                                    src="/img/home/home.png"
-                                    class="card-img-top"
-                                    alt="..."
-                                />
-                                <div class="card-body">
-                                    <span class="city">Uyo, Akwa Ibom</span>
-                                    <div class="d-flex justify-content-between">
-                                        <div class="title">Ibom Estate</div>
-                                        <div>
-                                            <span class="price"
-                                                >&#8358;4.5m</span
-                                            >/plot
-                                        </div>
-                                    </div>
-                                    <div class="icons">
-                                        <ul>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_1.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_2.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_3.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                            <li>
-                                                <img
-                                                    src="/img/icon/icon_4.png"
-                                                    alt=""
-                                                    srcset=""
-                                                />
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- button More -->
-                </div>
-            </div>
-        </div>
-
         <div>
-            <div class="container mt-5 mb-5">
-                <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-6">
-                        <carousel-property />
-                    </div>
-                    <div class="col-sm-12 col-md-12 col-lg-6">
-                        <form-management />
-                    </div>
-                </div>
+            <div class="container">
+                <PropertyManagment />
             </div>
         </div>
         </div>
@@ -858,6 +368,9 @@ export default {
 }
 * {
     font-family: sofiaPro;
+}
+.carousel-item img{
+    height: 500px !important;
 }
 .form-edit {
     padding: 1rem 0 0 0;
@@ -948,7 +461,7 @@ h5 {
 }
 .wrapper {
     background: white;
-    height: 65vh;
+    /* height: 65vh; */
     background-size: cover;
     background-position: center;
 }
@@ -1416,6 +929,10 @@ ul li {
     margin: 7rem 5rem 7rem 8rem;
 }
 @media screen and (max-width: 578px) {
+    .wrapper-content-one h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -1426,10 +943,10 @@ ul li {
     }
     .wrapper {
         background: white;
-        height: 120.6vh;
+        /* height: 120.6vh; */
         background-size: cover;
         background-position: center;
-        margin-bottom: 22rem;
+        /* margin-bottom: 22rem; */
     }
     .btn-success {
         width: 100%;
@@ -1524,10 +1041,10 @@ ul li {
     }
     .wrapper {
         background: white;
-        height: 70vh;
+        /* height: 70vh; */
         background-size: cover;
         background-position: center;
-        margin-bottom: 9rem;
+        /* margin-bottom: 9rem; */
     }
     .wrapper-content img {
         width: 1.5rem;
@@ -1576,7 +1093,7 @@ ul li {
     }
     .wrapper {
         background: white;
-        height: 40vh;
+        /* height: 40vh; */
         background-size: cover;
         background-position: center;
     }

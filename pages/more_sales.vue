@@ -16,15 +16,15 @@
                     <div class="card shadow rounded">
                         <img
                             :src="info.photo_main"
-                            class="card-img-top"
+                            class="card-img-top img-size"
                             alt="..."
                         />
                         <div class="card-body">
-                            <span class="city">{{info.address}}, {{info.city}}, {{info.state}}</span>
+                            <span class="city">{{info.address.slice(0,20)}}.., {{info.city}}, {{info.state}}</span>
                             <div class="d-flex justify-content-between">
-                                <div class="title">{{info.title}}</div>
+                                <div class="title">{{info.title.slice(0,20)}}..</div>
                                 <div>
-                                    <span class="price">&#8358;{{info.price}}</span>/plot
+                                    <span class="price">&#8358;{{info.price}}</span>
                                 </div>
                             </div>
                              <div class="icons">
@@ -144,6 +144,9 @@ export default {
 }
 .form-edit {
     padding: 1rem 0 0 0;
+}
+.img-size{
+    height: 300px !important;
 }
 .form-head {
     font-style: normal;
